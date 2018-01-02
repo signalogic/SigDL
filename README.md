@@ -1,12 +1,18 @@
 # SigDCA
 
-[this page under construction] The Deep Compression and Acceleration (DCA) SDK provides binary libraries, example C/C++ and Python source code, and demos for deep model compression and acceleration of IoT and Edge embedded systems.  Functionality includes:
+[this page under construction] The Deep Compression and Acceleration (DCA) SDK provides binary libraries, example C/C++ and Python source code, and demos for:
 
+* deep learning model compression for real-time IoT and Edge embedded systems
+
+* acceleration of deep learning model training and testing in servers
+
+Functionality includes:
+
+ - support for deep learning models AlexNet, VGG-16, LeNet-5 and LeNet-300
+ 
  - a process flow loop for cloud training and testing, compression, and embedded target training and testing
  
- - support for deep learning models a, b, c
- 
- - support for embedded targets Nvidia Jetson TX2 (Parker SoC, Pascal GPU), Atom x5-E3940 (quad-core 1.3GHz)
+ - support for embedded targets Nvidia Jetson TX2 (Parker SoC, Pascal GPU), Atom x5-E3940 (quad-core 1.3 GHz)
 
 # Table of Contents
 
@@ -22,7 +28,7 @@
 <a name="CompressionFlowDiagram"></a>
 ## Compression Flow Diagram
 
-Below is a flow diagram showing the multi-iterative, multi-testpoing nature of model compression.  The objective is to map continuous integration and continuous deployment (CICD) onto available server resources (public cloud and/or private servers) and embedded targets (i.e. the product).
+Below is a flow diagram showing the multi-iterative, multi-testpoint nature of model compression.  The objective is to map continuous integration and continuous deployment (CICD) onto available server resources (i.e. public cloud and/or private servers) and embedded targets (i.e. IoT and Edge products).
 
 &nbsp;<br/>
 
