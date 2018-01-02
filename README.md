@@ -23,6 +23,7 @@ Functionality includes:
 [Supported Embedded Targets](#SupportedEmbeddedTargets)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Nvidida Jetson TX2](#NvidiaJetsonTX2)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Intel x5-E3940](#IntelX5E3940)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Texas Instruments c66x (pending, see notes below)](#TexasInstrumentsC66x)<br/>
 
 <a name="ModelCompression"></a>
 # Model Compression
