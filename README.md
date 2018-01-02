@@ -23,7 +23,7 @@ Functionality includes:
 &nbsp;&nbsp;&nbsp;&nbsp;[Compression Flow Diagram](#CompressionFlowDiagram)<br/>
 [Model Acceleration](#ModelAcceleration)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Acceleration Flow Diagram](#AccelerationFlowDiagram)<br/>
-[Supported Embedded Targets](#SupportedEmbeddedTargets)<br/>
+[Supported Embedded Targets for Deep Learning](#SupportedEmbeddedTargets)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Nvidida Jetson TX2](#NvidiaJetsonTX2)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Intel x5-E3940](#IntelX5E3940)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Texas Instruments c66x (pending, see notes)](#TexasInstrumentsC66x)<br/>
@@ -63,7 +63,7 @@ Notes about the above flow diagram:
 &nbsp;<br/>
 
 <a name="SupportedEmbeddedTargets"></a>
-# Supported Embedded Targets
+# Supported Embedded Targets for Deep Learning
 
 <a name="NvidiaJetsonTX2"></a>
 ## Nvidia Jetson TX2
