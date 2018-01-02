@@ -2,9 +2,9 @@
 
 [this page under construction] The Deep Compression and Acceleration (DCA) SDK provides binary libraries, example C/C++ and Python source code, and demos for:
 
-* deep learning model compression for real-time IoT and Edge embedded systems
+1. Deep learning model compression for real-time IoT and Edge embedded systems
 
-* acceleration of deep learning model training and testing in servers
+2. Deep learning model acceleration of training and testing in servers
 
 Functionality includes:
 
@@ -40,7 +40,7 @@ Notes about the above flow diagram:
 
 1) All testing blocks include non-real-time inference.  Inference is shown explicitly when real-time performance is required.
 
-2) Embedded target testing depends on whether cloud testing can exactly emulate the target; for example if cloud testing is not possible with a PCIe card containing target CPU/SoC devices (ARM, NPU, DSP, ASIC, etc) then it's likely that embedded target testing is needed.  Cloud testing for embedded targets using x86 CPU and/or GPU is expected to be an exact emulation.
+2) Embedded target testing depends on whether cloud testing can exactly emulate the target; for example if cloud testing is not possible with PCIe cards containing target CPU/SoC devices (ARM, NPU, DSP, ASIC, etc) then it's likely that embedded target testing will be needed to measure actual real-time performance and model accuracy.  Cloud testing for embedded targets using x86 CPU and/or GPU is expected to be a reliable prediction of real-time performance and accuracy, by enforcing limits on number of cores, clock rate, available memory, etc.  In all cases, power consumption must be measured on the embedded target.
 
 3) Compression requires math and algorithm expertise and tradeoff analysis.  Some concepts are basic such as quantization and weight sharing, others require advanced math, for example sparse matrix and FFT based computation.
 
