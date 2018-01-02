@@ -20,6 +20,9 @@ Functionality includes:
 &nbsp;&nbsp;&nbsp;&nbsp;[Compression Flow Diagram](#CompressionFlowDiagram)<br/>
 [Model Acceleration](#ModelAcceleration)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Acceleration Flow Diagram](#AccelerationFlowDiagram)<br/>
+[Supported Embedded Targets](#SupportedEmbeddedTargets)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Nvidida Jetson TX2](#NvidiaJetsonTX2)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Intel x5-E3940](#IntelX5E3940)<br/>
 
 <a name="ModelCompression"></a>
 # Model Compression
@@ -38,9 +41,9 @@ Below is a flow diagram showing the multi-iterative, multi-testpoint nature of m
 
 Notes about the above flow diagram:
 
-1) All testing blocks include non-real-time inference.  Inference is shown explicitly when real-time performance is required.
+1) All testing blocks include non-real-time inference.  An inference block is shown explicitly when real-time performance is required.
 
-2) Embedded target testing depends on whether cloud testing can exactly emulate the target; for example if cloud testing is not possible with PCIe cards containing target CPU/SoC devices (ARM, NPU, DSP, ASIC, etc) then it's likely that embedded target testing will be needed to measure actual real-time performance and model accuracy.  Cloud testing for embedded targets using x86 CPU and/or GPU is expected to be a reliable prediction of real-time performance and accuracy, by enforcing limits on number of cores, clock rate, available memory, etc.  In all cases, power consumption must be measured on the embedded target.
+2) Embedded target testing depends in part on how well cloud testing can emulate the target; for example if cloud testing is not possible with PCIe cards containing the same CPU/SoC devices (ARM, NPU, DSP, ASIC, etc) then it's likely that embedded target testing will be needed to measure model real-time performance and accuracy.  For embedded targets using x86 CPU and/or GPU devices, limits on number of cores, clock rate, available memory, etc. can be enforced during cloud testing in order to give reliable predictions of real-time performance and accuracy.  In all cases, power consumption must be measured on the embedded target.
 
 3) Compression requires math and algorithm expertise and tradeoff analysis.  Some concepts are basic such as quantization and weight sharing, others require advanced math, for example sparse matrix and FFT based computation.
 
@@ -55,3 +58,16 @@ Notes about the above flow diagram:
 
 &nbsp;<br/>
 
+<a name="SupportedEmbeddedTargets"></a>
+# Supported Embedded Targets
+
+<a name="NvidiaJetsonTX2"></a>
+## Nvidia Jetson TX2
+
+<a name="IntelX5E3940"></a>
+## Intel x5-E3940
+
+<a name="TexasInstrumentsC66x"></a>
+## Texas Instruments c66x
+
+Deep learning model support for c66x multicore CPUs is pending support from Texas Instruments.  The architecture shown in the pictures below -- a combination of Atom x86 and TI c66x cores, with 32 to 64 c66x cores accessible as half-size PCIe card(s) in a mini-ITX format -- currently supports cloud training/testing, OpenCV, C/C++, Python, math libraries, 8-bit MAC (32-bit accum) operations, and other essential deep learning components, but a substantial amount of additional work is needed.  If you are using or considering to use TI c66x and wish to discuss this, please contact Signalogic.
