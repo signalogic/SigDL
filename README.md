@@ -1,8 +1,8 @@
 # SigDCA
 
-```html
+ ```Deprecated
 <font color="red">[this page under construction]</font>
-```
+´´´´
 The Deep Compression and Acceleration (DCA) SDK provides binary libraries, example C/C++ and Python source code, and demos for:
 
 1. Deep learning model compression for real-time IoT and Edge embedded systems
