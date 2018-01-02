@@ -23,7 +23,7 @@ Functionality includes:
 [Supported Embedded Targets](#SupportedEmbeddedTargets)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Nvidida Jetson TX2](#NvidiaJetsonTX2)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Intel x5-E3940](#IntelX5E3940)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Texas Instruments c66x (pending, see notes below)](#TexasInstrumentsC66x)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Texas Instruments c66x (pending, see notes)](#TexasInstrumentsC66x)<br/>
 
 <a name="ModelCompression"></a>
 # Model Compression
@@ -71,4 +71,4 @@ Notes about the above flow diagram:
 <a name="TexasInstrumentsC66x"></a>
 ## Texas Instruments c66x
 
-Deep learning model support for c66x multicore CPUs is pending support from Texas Instruments.  The architecture shown in the pictures below -- a combination of Atom x86 and TI c66x cores, with 32 to 64 c66x cores accessible as half-size PCIe card(s) in a mini-ITX format -- currently supports cloud training/testing, OpenCV, C/C++, Python, math libraries, 8-bit MAC (32-bit accum) operations, and other essential deep learning components, but a substantial amount of additional work is needed.  If you are using or considering to use TI c66x and wish to discuss this, please contact Signalogic.
+Deep learning model support for c66x multicore CPUs is pending support from Texas Instruments.  The architecture shown in the pictures below -- a combination of Atom x86 and TI c66x cores in a mini-ITX format, with 32 to 64 c66x cores accessible as half-size PCIe card(s) -- currently supports cloud training/testing, OpenCV, C/C++, Python, math libraries, 8-bit MAC (32-bit accum) operations, and other essential deep learning components, but a substantial amount of additional work is needed.  If you are using or considering to use TI c66x and wish to discuss this, please contact Signalogic.
