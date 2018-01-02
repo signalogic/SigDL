@@ -1,6 +1,6 @@
 # SigDCA
 
- ```C
+ ```CoffeeScript
 [this page under construction]
 ```
 The Deep Compression and Acceleration (DCA) SDK provides binary libraries, example C/C++ and Python source code, and demos for:
