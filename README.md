@@ -88,7 +88,7 @@ Below is an image showing an expanded view of the Jetson TX2 board set up in the
 
 The Amazon AWS DeepLens uses a small motherboard based with an x5-E3940 CPU.  Here is a similar commercially available board <sup>1</sup>:
 
-![Image](https://github.com/signalogic/SigDCA/blob/master/images/Jetson_TX2_in_lab_with_peripherals.jpg?raw=true "Nvidia Jetson TX2 board in the lab, expanded view, with external peripherals labeled")
+![Image](https://github.com/signalogic/SigDCA/blob/master/images/E3940_miniITX_conga-IA5_web.png?raw=true "x5-E3940 quad core Atom mini-ITX board")
 
 <sup>1 </sup>The above image is a web pic, we don't have one in our lab yet.
 
