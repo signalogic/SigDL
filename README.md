@@ -15,7 +15,7 @@ Functionality includes:
  
  - a process flow loop for cloud training and testing, compression, and embedded target training and testing
  
- - support for embedded targets Nvidia Jetson TX2 (Parker SoC, Pascal GPU), Atom x5-E3940 (quad-core 1.3 GHz)
+ - support for embedded targets Nvidia Jetson TX2 (Parker SoC, Pascal GPU) and Atom x5-E3940 (quad-core 1.3 GHz)
 
 # Table of Contents
 
