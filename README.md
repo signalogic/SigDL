@@ -81,6 +81,10 @@ Below is an image showing an expanded view of the Jetson TX2 board set up in the
 
 ![Image](https://github.com/signalogic/SigDCA/blob/master/images/Jetson_TX2_in_lab_with_peripherals.jpg?raw=true "Nvidia Jetson TX2 board in the lab, expanded view, with external peripherals labeled")
 
+Below the "ocean FFT" and "random fog" CUDA demos are running.  For deep learning, inference run-times can be downloaded and run via remote log-in, which is a requirement for CIDC cloud based model compression, as described above.
+
+![Image](https://github.com/signalogic/SigDCA/blob/master/images/Jetson_TX2_in_lab_CUDA_demos.jpg?raw=true "Nvidia Jetson TX2 board running CUDA demos, using remote download and run")
+
 &nbsp;<br/>
 
 <a name="IntelX5E3940"></a>
