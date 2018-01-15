@@ -73,7 +73,7 @@ Notes about the above flow diagram:
 
 Below is an image showing the Jetson TX2 board set up in the lab, with key TX2 peripherals labeled.  Note the small camera daughtercard at right.
 
-![Image](https://github.com/signalogic/SigDCA/blob/master/images/Jetson_TX2_in_lab_with_labels.jpg?raw=true "Nvidia Jetson TX2 board in the lab, with peripherals labeled")
+![Image](https://github.com/signalogic/SigDCA/blob/master/images/Jetson_TX2_in_lab_with_labels2.jpg?raw=true "Nvidia Jetson TX2 board in the lab, with peripherals labeled")
 
 &nbsp;<br/>
 
