@@ -31,6 +31,9 @@ Functionality includes:
 <a name="ModelCompression"></a>
 # Model Compression
 
+Model compression is the process of compressing and transforming a deep learning model trained and tested in the cloud into a model suitable for an IoT or Edge application embedded target.  Compression methods include basic approaches such as pruning, weight quantization and sharing, and weight encoding (for example Huffman coding), and more advanced approaches such as math architecture that converts convolution layers to sparse matrices (under specific conditions) suitable for FFT processing; i.e. convolution in the frequency domain.
+
+Whatever compression methods are chosen, the model must <i>be retrained</i> using fixed-point weight values, alternative math, etc. and other algorithm changes due to compression, in order to reach an acceptable loss in accuracy (typically 2-3%).  The process of compression, testing, retraining may require many iterations until acceptable tradeoffs are reached.  Obviously, this time-consuming iterative process should be done on high performance cloud servers and not on the embedded target, where it would take prohibitive amounts of time.
 
 <a name="CompressionFlowDiagram"></a>
 ## Compression Flow Diagram
@@ -92,7 +95,7 @@ The Amazon AWS DeepLens uses a small motherboard based with an x5-E3940 CPU.  He
 <a name="TexasInstrumentsC66x"></a>
 ## Texas Instruments c66x
 
-Deep learning model support for c66x multicore CPUs is pending support from Texas Instruments. c66x devices can perform energy efficient, high performance deep learning, as demonstrated in this [deep learning embedded target comparison paper by Dr. Nachiket Kapre](http://nachiket.github.io/publications/caffepresso_cases2016.pdf) at the University of Waterloo.  Whether TI will embrace the need for a cloud based deep learning solution to support training, testing, and model compression for embedded targets -- and the required investment, resources, and third-party support -- is a pending question.
+Deep learning model support for c66x multicore CPUs is pending support from Texas Instruments. Fundamentally, c66x devices can perform energy-efficient, high performance deep learning, as demonstrated in this [deep learning embedded target comparison paper by Dr. Nachiket Kapre](http://nachiket.github.io/publications/caffepresso_cases2016.pdf) at the University of Waterloo.  Whether TI will embrace the need for a cloud based deep learning solution to support training, testing, and model compression for embedded targets -- and the required investment, resources, and third-party support -- is a pending question.
 
 As a potential basis for a c66x deep learning cloud solution, the architecture shown in the pictures and links below already works.  Currently this architecture supports OpenCV, C/C++, Python, c66x math and DSP libraries, 8-bit MAC operations (32-bit accumulation), and other essential deep learning components, but a substantial amount of additional work is needed.
 
@@ -108,7 +111,7 @@ In addition to the above "pure cloud" solutions, the combined c66x + x86 archite
 
 ![Image](https://github.com/signalogic/SigDCA/blob/master/images/deep_learning_c66x_x86_server_32cores_iso_view.png?raw=true "TI c66x + x86 deep learning small server solution, using mini-ITX (iso view)")
 
-In the mini-ITX images, the motherboard is a dual core Atom (C2358, 1.74 GHz) with 4x GbE interfaces, 8 GB DDR3 mem, 1333 MHz.  A more suitable motherboard would be a x5-E3940 quad core Atom, with either a x4 or x8 PCIe slot (or mPCIe interface).
+In the mini-ITX images, the motherboard is a dual core Atom (C2358 @ 1.74 GHz) with 4x GbE interfaces, and 8 GB DDR3 mem @ 1333 MHz.  A more suitable motherboard would be a x5-E3940 quad core Atom, with either a x4 or x8 PCIe slot (or mPCIe interface).
 
 ![Image](https://github.com/signalogic/SigDCA/blob/master/images/deep_learning_c66x_x86_server_32cores_top_view.png?raw=true "TI c66x + x86 deep learning small server solution, using mini-ITX (top view)")
 
