@@ -90,7 +90,7 @@ The Amazon AWS DeepLens uses a small motherboard based with an x5-E3940 CPU.  He
 
 ![Image](https://github.com/signalogic/SigDCA/blob/master/images/E3940_miniITX_conga-IA5_web.png?raw=true "x5-E3940 quad core Atom mini-ITX board")
 
-<sup>1 </sup>The above image is a web pic, we don't have one in our lab yet.
+<sup>1 </sup>Note - the above image is a web pic, we don't have one in our lab yet.
 
 <a name="TexasInstrumentsC66x"></a>
 ## Texas Instruments c66x
