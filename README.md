@@ -83,6 +83,12 @@ Below is an image showing an expanded view of the Jetson TX2 board set up in the
 <a name="IntelX5E3940"></a>
 ## Intel x5-E3940
 
+The Amazon AWS DeepLens uses a small motherboard based with an x5-E3940 CPU.  Here is a similar commercially available board <sup>1</sup>:
+
+![Image](https://github.com/signalogic/SigDCA/blob/master/images/Jetson_TX2_in_lab_with_peripherals.jpg?raw=true "Nvidia Jetson TX2 board in the lab, expanded view, with external peripherals labeled")
+
+<sup>1 </sup>The above image is a web pic, we don't have one in our lab yet.
+
 <a name="TexasInstrumentsC66x"></a>
 ## Texas Instruments c66x
 
@@ -105,5 +111,7 @@ In addition to the above "pure cloud" solutions, the combined c66x + x86 archite
 In the mini-ITX images, the motherboard is a dual core Atom (C2358, 1.74 GHz) with 4x GbE interfaces, 8 GB DDR3 mem, 1333 MHz.  A more suitable motherboard would be a x5-E3940 quad core Atom, with either a x4 or x8 PCIe slot (or mPCIe interface).
 
 ![Image](https://github.com/signalogic/SigDCA/blob/master/images/deep_learning_c66x_x86_server_32cores_top_view.png?raw=true "TI c66x + x86 deep learning small server solution, using mini-ITX (top view)")
+
+As an interesting side note, besides x86 it's also possible to combine a half-size c66x PCIe card Tegra GPU SoCs, for example the Jetson TX2 board has an x4 PCIe slot (see Jetson pics above).  What could be done with a next-gen Tegra (say 128 CUDA cores and 128 Tensor cores) and 32 c66x cores ?
 
 If you are using or considering to use TI c66x and wish to discuss this either with Signalogic or 3-way with TI Sr. Management, please contact Signalogic.
