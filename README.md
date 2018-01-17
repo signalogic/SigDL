@@ -1,9 +1,9 @@
-# SigDCA
+# SigDL -- Deep Learning for IoT and Edge Embedded Targets
 
  ```html
 <! this page under construction
 ```
-The Deep Compression and Acceleration (DCA) SDK provides binary libraries, example C/C++ and Python source code, and demos for:
+The SigDL SDK provides binary libraries, example C/C++ and Python source code, and demos for:
 
 1. Deep learning model compression for real-time IoT and Edge embedded systems
 
@@ -42,7 +42,7 @@ Below is a flow diagram showing the multi-iterative, multi-testpoint nature of m
 
 &nbsp;<br/>
 
-![Image](https://github.com/signalogic/SigDCA/blob/master/images/Deep_Learning_Model_Compression_Flow_RevA2.png?raw=true "Deep learning model compression flow diagram")
+![Image](https://github.com/signalogic/SigDL/blob/master/images/Deep_Learning_Model_Compression_Flow_RevA2.png?raw=true "Deep learning model compression flow diagram")
 
 &nbsp;<br/>
 
@@ -73,17 +73,17 @@ Notes about the above flow diagram:
 
 Below is an image showing the Jetson TX2 board set up in the lab, with key TX2 peripherals labeled.  Note the small camera daughtercard at right.
 
-![Image](https://github.com/signalogic/SigDCA/blob/master/images/Jetson_TX2_in_lab_with_labels2.jpg?raw=true "Nvidia Jetson TX2 board in the lab, with peripherals labeled")
+![Image](https://github.com/signalogic/SigDL/blob/master/images/Jetson_TX2_in_lab_with_labels2.jpg?raw=true "Nvidia Jetson TX2 board in the lab, with peripherals labeled")
 
 &nbsp;<br/>
 
 Below is an image showing an expanded view of the Jetson TX2 board set up in the lab.  Note the requirement for a USB hub to use the integrated keyboard and mouse, and also the "TTL to USB" cable required for a serial debug console.
 
-![Image](https://github.com/signalogic/SigDCA/blob/master/images/Jetson_TX2_in_lab_with_peripherals.jpg?raw=true "Nvidia Jetson TX2 board in the lab, expanded view, with external peripherals labeled")
+![Image](https://github.com/signalogic/SigDL/blob/master/images/Jetson_TX2_in_lab_with_peripherals.jpg?raw=true "Nvidia Jetson TX2 board in the lab, expanded view, with external peripherals labeled")
 
 Below the "ocean FFT" and "random fog" CUDA demos are running.  For deep learning, inference run-times can be downloaded and run via remote log-in, which is a requirement for CIDC cloud based model compression, as described above.
 
-![Image](https://github.com/signalogic/SigDCA/blob/master/images/Jetson_TX2_in_lab_CUDA_demos.jpg?raw=true "Nvidia Jetson TX2 board running CUDA demos, using remote download and run")
+![Image](https://github.com/signalogic/SigDL/blob/master/images/Jetson_TX2_in_lab_CUDA_demos.jpg?raw=true "Nvidia Jetson TX2 board running CUDA demos, using remote download and run")
 
 &nbsp;<br/>
 
@@ -92,7 +92,7 @@ Below the "ocean FFT" and "random fog" CUDA demos are running.  For deep learnin
 
 The Amazon AWS DeepLens uses a small motherboard based with an x5-E3940 CPU.  Here is a similar commercially available board <sup>1</sup>:
 
-![Image](https://github.com/signalogic/SigDCA/blob/master/images/E3940_miniITX_conga-IA5_web.png?raw=true "x5-E3940 quad core Atom mini-ITX board")
+![Image](https://github.com/signalogic/SigDL/blob/master/images/E3940_miniITX_conga-IA5_web.png?raw=true "x5-E3940 quad core Atom mini-ITX board")
 
 <sup>1 </sup>Note - the above image is a web pic, we don't have one in our lab yet.
 
@@ -105,19 +105,19 @@ As a potential basis for a c66x deep learning cloud solution, the architecture s
 
 The images below show multiple 64-core PCIe cards (up to 384 or more c66x cores depending on server form-factor, suitable for training on high resolution data sets), in standard 1U and 2U Dell and HP servers.
 
-![Image](https://github.com/signalogic/SigDCA/blob/master/images/Dell_R720_128_c66x_cores.jpg?raw=true "Dell R720 server with 128 c66x cores, suitable for cloud based deep learning training, testing, and model compression")
+![Image](https://github.com/signalogic/SigDL/blob/master/images/Dell_R720_128_c66x_cores.jpg?raw=true "Dell R720 server with 128 c66x cores, suitable for cloud based deep learning training, testing, and model compression")
 
-![Image](https://github.com/signalogic/SigDCA/blob/master/images/HP_DL380_G9_128_c66x_cores.jpg?raw=true "HP DL380 server with 128 c66x cores, suitable for cloud based deep learning training, testing, and model compression")
+![Image](https://github.com/signalogic/SigDL/blob/master/images/HP_DL380_G9_128_c66x_cores.jpg?raw=true "HP DL380 server with 128 c66x cores, suitable for cloud based deep learning training, testing, and model compression")
 
 For detailed information on the underlying technology of combined c66x + x86 architecture solutions, see the TI wiki pages for [HPC](http://processors.wiki.ti.com/index.php/HPC), [c66x OpenCV](http://processors.wiki.ti.com/index.php/C66x_opencv), and [NFV Transcoding](http://processors.wiki.ti.com/index.php/NFV_Transcoding).
 
 In addition to the above "pure cloud" solutions, the combined c66x + x86 architecture can also target small-form factor servers in the 30 to 70 W range.  The images below show a combination of Atom x86 and TI c66x cores in a mini-ITX format, with 32 to 64 c66x cores accessible as half-size PCIe card(s).
 
-![Image](https://github.com/signalogic/SigDCA/blob/master/images/deep_learning_c66x_x86_server_32cores_iso_view.png?raw=true "TI c66x + x86 deep learning small server solution, using mini-ITX (iso view)")
+![Image](https://github.com/signalogic/SigDL/blob/master/images/deep_learning_c66x_x86_server_32cores_iso_view.png?raw=true "TI c66x + x86 deep learning small server solution, using mini-ITX (iso view)")
 
 In the mini-ITX images, the motherboard is a dual core Atom (C2358 @ 1.74 GHz) with 4x GbE interfaces, and 8 GB DDR3 mem @ 1333 MHz.  A more suitable motherboard would be a x5-E3940 quad core Atom, with either a x4 or x8 PCIe slot (or mPCIe interface).
 
-![Image](https://github.com/signalogic/SigDCA/blob/master/images/deep_learning_c66x_x86_server_32cores_top_view.png?raw=true "TI c66x + x86 deep learning small server solution, using mini-ITX (top view)")
+![Image](https://github.com/signalogic/SigDL/blob/master/images/deep_learning_c66x_x86_server_32cores_top_view.png?raw=true "TI c66x + x86 deep learning small server solution, using mini-ITX (top view)")
 
 As an interesting side note, besides x86 it's also possible to combine a half-size c66x PCIe card Tegra GPU SoCs, for example the Jetson TX2 board has an x4 PCIe slot (see Jetson pics above).  What could be done with a next-gen Tegra (say 128 CUDA cores and 128 Tensor cores) and 32 c66x cores ?
 
