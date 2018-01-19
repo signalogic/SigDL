@@ -23,7 +23,7 @@ Functionality includes:
 &nbsp;&nbsp;&nbsp;&nbsp;[Compression Flow Diagram](#CompressionFlowDiagram)<br/>
 [Model Acceleration](#ModelAcceleration)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Acceleration Flow Diagram](#AccelerationFlowDiagram)<br/>
-[Supported Embedded Targets for Deep Learning](#SupportedEmbeddedTargets)<br/>
+[Deep Learning Embedded Targets](#SupportedEmbeddedTargets)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Nvidia Jetson TX2](#NvidiaJetsonTX2)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Atom (Intel) x5-E3940](#IntelX5E3940)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Movidius (Intel) MA2450 Neural Net Chip](#MovidiusMA2450)<br/>
@@ -67,7 +67,9 @@ Notes about the above flow diagram:
 &nbsp;<br/>
 
 <a name="SupportedEmbeddedTargets"></a>
-# Supported Embedded Targets for Deep Learning
+# Deep Learning Embedded Targets
+
+Work is ongoing to support the following embedded targets with SigDL software.
 
 <a name="NvidiaJetsonTX2"></a>
 ## Nvidia Jetson TX2
