@@ -11,11 +11,11 @@ The SigDL SDK provides binary libraries, example C/C++ and Python source code, a
 
 Functionality includes:
 
- - support for deep learning models AlexNet, VGG-16, LeNet-5 and LeNet-300
+ - support for deep learning models AlexNet, VGG-16, LeNet-5 and LeNet-300, and MobileNets
  
  - a process flow loop for cloud training and testing, compression, and embedded target training and testing
  
- - support for embedded targets Nvidia Jetson TX2 (Parker SoC, Pascal GPU) and Atom x5-E3940 (quad-core 1.3 GHz)
+ - support for embedded targets Nvidia Jetson TX2 (Parker SoC, Pascal GPU), Atom x5-E3940 (quad-core 1.3 GHz), and Movidius MA2450
 
 # Table of Contents
 
@@ -25,7 +25,8 @@ Functionality includes:
 &nbsp;&nbsp;&nbsp;&nbsp;[Acceleration Flow Diagram](#AccelerationFlowDiagram)<br/>
 [Supported Embedded Targets for Deep Learning](#SupportedEmbeddedTargets)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Nvidia Jetson TX2](#NvidiaJetsonTX2)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Intel x5-E3940](#IntelX5E3940)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Atom (Intel) x5-E3940](#IntelX5E3940)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Movidius (Intel) MA2450 Neural Net Chip](#MovidiusMA2450)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Texas Instruments c66x (pending, see notes)](#TexasInstrumentsC66x)<br/>
 
 <a name="ModelCompression"></a>
@@ -88,13 +89,18 @@ Below the "ocean FFT" and "random fog" CUDA demos are running.  For deep learnin
 &nbsp;<br/>
 
 <a name="IntelX5E3940"></a>
-## Intel x5-E3940
+## Atom x5-E3940
 
 The Amazon AWS DeepLens uses a small motherboard based with an x5-E3940 CPU.  Here is a similar commercially available board <sup>1</sup>:
 
 ![Image](https://github.com/signalogic/SigDL/blob/master/images/E3940_miniITX_conga-IA5_web.png?raw=true "x5-E3940 quad core Atom mini-ITX board")
 
 <sup>1 </sup>Note - the above image is a web pic, we don't have one in our lab yet.
+
+<a name="MovidiusMA2450"></a>
+## Movidius MA2450 Neural Net Chip
+
+&nbsp;<br/>
 
 <a name="TexasInstrumentsC66x"></a>
 ## Texas Instruments c66x
