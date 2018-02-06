@@ -102,11 +102,17 @@ The Amazon AWS DeepLens uses a small motherboard based with an x5-E3940 CPU.  He
 <a name="MovidiusMA2450"></a>
 ## Movidius MA2450 Neural Net Chip
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_internal_assembly_and_cabling.jpeg?raw=true "AIY Vision Kit, including Raspberry Pi W Zero module, Movidius MA2450 module, and v2 camera")
+Below are some lab pics showing internal assembly and cabling of the AIY vision kit.  The assembly is formed by attaching a daughtermodule with the Movidius MA2450 device and a v2 camera to a Raspberry Pi Zero W module.  The Zero W is required as it has a fine pitch FPC (Flexible Printed Circuit) connector for the camera.
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_partial_assembly2.jpeg?raw=true "AIY Vision Kit partial assembly (including Raspberry Pi W Zero module, Movidius MA2450 module, and v2 camera")
+![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_internal_assembly_and_cabling.jpeg?raw=true "AIY Vision Kit, including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera")
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_partial_assembly2.jpeg?raw=true "AIY Vision Kit partial assembly (including Raspberry Pi W Zero module, Movidius MA2450 module, and v2 camera")
+&nbsp;<br/>
+
+![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_partial_assembly2.jpeg?raw=true "AIY Vision Kit partial assembly (including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera")
+
+&nbsp;<br/>
+
+![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_partial_assembly2.jpeg?raw=true "AIY Vision Kit partial assembly (including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera")
 
 &nbsp;<br/>
 
