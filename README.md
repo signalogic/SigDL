@@ -112,7 +112,7 @@ Below are some lab pics showing internal assembly and cabling of the AIY vision 
 
 &nbsp;<br/>
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_partial_assembly2.jpeg?raw=true "AIY Vision Kit partial assembly (including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera")
+![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_partial_assembly3.jpeg?raw=true "AIY Vision Kit partial assembly (including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera")
 
 &nbsp;<br/>
 
