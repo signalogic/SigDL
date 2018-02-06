@@ -102,6 +102,12 @@ The Amazon AWS DeepLens uses a small motherboard based with an x5-E3940 CPU.  He
 <a name="MovidiusMA2450"></a>
 ## Movidius MA2450 Neural Net Chip
 
+![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_internal_assembly_and_cabling.jpeg?raw=true "AIY Vision Kit, including Raspberry Pi W Zero module, Movidius MA2450 module, and v2 camera")
+
+![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_partial_assembly2.jpeg?raw=true "AIY Vision Kit partial assembly (including Raspberry Pi W Zero module, Movidius MA2450 module, and v2 camera")
+
+![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_partial_assembly2.jpeg?raw=true "AIY Vision Kit partial assembly (including Raspberry Pi W Zero module, Movidius MA2450 module, and v2 camera")
+
 &nbsp;<br/>
 
 <a name="TexasInstrumentsC66x"></a>
