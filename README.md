@@ -128,7 +128,7 @@ The next set of images show the Raspberry Pi Zero W module with the Movidius vis
 
 &nbsp;<br/>
 
-The image below shows dmesg display, grepping for "googlevision", after booting with the Movidius vision module and camera attached. 
+The image below shows dmesg display, grepped for "googlevision", after booting with the Movidius vision module and camera attached.  Note the vision module ASIC chip is called "Myriad".
 
 ![Image](https://github.com/signalogic/SigDL/blob/master/images/Raspberry_pi_w_zero_Myriad_vision_module_boot.jpeg?raw=true "dmesg display after booting Raspberry Pi Zero W module with Movidius MA2450 module and v2 camera attached")
 
