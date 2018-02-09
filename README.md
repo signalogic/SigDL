@@ -114,7 +114,7 @@ The image below shows dmesg after a Raspberry Pi Zero W boot, still without the 
 
 ![Image](https://github.com/signalogic/SigDL/blob/master/images/Raspberry_pi_w_zero_basic_config_boot_dmesg.jpeg?raw=true "Raspberry Pi Zero W module boot, without daughtermodule and camera connected")
 
-The next image shows the Raspberry Pi Zero W module with the Movidius vision daughtermodule attached, and the camera connected. 
+The next set of images show the Raspberry Pi Zero W module with the Movidius vision daughtermodule attached, and the camera connected, from different perspectives. 
 
 ![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_internal_assembly_and_cabling.jpeg?raw=true "AIY Vision Kit, including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera")
 
@@ -125,6 +125,12 @@ The next image shows the Raspberry Pi Zero W module with the Movidius vision dau
 &nbsp;<br/>
 
 ![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_partial_assembly3.jpeg?raw=true "AIY Vision Kit partial assembly (including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera")
+
+&nbsp;<br/>
+
+The image below shows dmesg display, grepping for "googlevision", after booting with the Movidius vision module and camera attached. 
+
+![Image](https://github.com/signalogic/SigDL/blob/master/images/Raspberry_pi_w_zero_Myriad_vision_module_boot.jpeg?raw=true "dmesg display after booting Raspberry Pi Zero W module with Movidius MA2450 module and v2 camera attached")
 
 &nbsp;<br/>
 
