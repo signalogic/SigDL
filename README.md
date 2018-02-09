@@ -110,7 +110,7 @@ The image below shows the Raspberry Pi Zero W module by itself, without the Movi
 
 &nbsp;<br/>
 
-The image below shows dmesg after a Raspberry Pi Zero W boot, still without the Movidius vision module or camera attached.  Note that the Raspberry Pi SoC contains a simple onchip boot loader which does a few SoC initialization steps, but from that point is entirely dependent on micro SD card contents (the boot process is [documented here](https://raspberrypi.stackexchange.com/questions/10489/how-does-raspberry-pi-boot/10490#10490)).
+The image below shows dmesg after a Raspberry Pi Zero W boot, still without the Movidius vision module or camera attached.  Note that the Raspberry Pi SoC contains a simple onchip boot loader which does a few SoC initialization steps, but from that point forward is entirely dependent on micro SD card contents (the boot process is [documented on this stackexchange thread](https://raspberrypi.stackexchange.com/questions/10489/how-does-raspberry-pi-boot/10490#10490)).
 
 ![Image](https://github.com/signalogic/SigDL/blob/master/images/Raspberry_pi_w_zero_basic_config_boot_dmesg.jpeg?raw=true "Raspberry Pi Zero W module boot, without daughtermodule and camera connected")
 
@@ -128,7 +128,8 @@ The next set of images show the Raspberry Pi Zero W module with the Movidius vis
 
 &nbsp;<br/>
 
-The image below shows dmesg display, grepped for "googlevision", after booting with the Movidius vision module and camera attached.  Note the vision module ASIC chip is called "Myriad".
+The image below shows dmesg display, grepped for "googlevision", after booting with the Movidius vision module and camera attached.  Note the vision module ASIC chip is called "Myriad".  "Bonnet" is a typical Googly word for daughtermodule -- embedded system fundamental emphasis on small form-factors, low power consumption, expansion options, and other key areas haven't changed since the 
+1990s, even if Google would like to apply new terminology.
 
 ![Image](https://github.com/signalogic/SigDL/blob/master/images/Raspberry_pi_w_zero_Myriad_vision_module_boot.jpeg?raw=true "dmesg display after booting Raspberry Pi Zero W module with Movidius MA2450 module and v2 camera attached")
 
@@ -137,9 +138,9 @@ The image below shows dmesg display, grepped for "googlevision", after booting w
 <a name="TexasInstrumentsC66x"></a>
 ## Texas Instruments c66x
 
-Deep learning model support for c66x multicore CPUs is pending support from Texas Instruments. Fundamentally, c66x devices are able to perform energy-efficient, high performance deep learning, as demonstrated in this [deep learning embedded target comparison paper by Dr. Nachiket Kapre](http://nachiket.github.io/publications/caffepresso_cases2016.pdf) at the University of Waterloo.  Whether TI will embrace the need for a cloud based c66x deep learning solution to support TI device-specific training, testing, and model compression for embedded targets -- and the required investment, resources, and third-party support -- is a pending question.
+Deep learning model support for c66x multicore CPUs is pending support from Texas Instruments. Fundamentally, c66x devices are able to perform energy-efficient, high performance deep learning, as demonstrated in this [deep learning embedded target comparison paper by Dr. Nachiket Kapre](http://nachiket.github.io/publications/caffepresso_cases2016.pdf) at the University of Waterloo.  Whether TI will embrace the need for a cloud based c66x deep learning solution to support c66x device-accurate training, testing, and model compression for embedded targets -- and the required investment, resources, and third-party support -- is a pending question.
 
-As a potential basis for a c66x deep learning cloud solution, the architecture shown in the pictures and links below already works.  Currently this architecture supports OpenCV, C/C++, Python, c66x math and DSP libraries, 8-bit MAC operations (32-bit accumulation), and other essential deep learning components, but a substantial amount of additional work is needed.
+As a potential basis for a c66x device-accurate deep learning cloud solution, the architecture shown in the pictures and links below already works.  Currently this architecture supports OpenCV, C/C++, Python, c66x math and DSP libraries, 8-bit MAC operations (32-bit accumulation), and other essential deep learning components, but a substantial amount of additional work is needed.
 
 The images below show multiple 64-core PCIe cards (up to 384 or more c66x cores depending on server form-factor, suitable for training on high resolution data sets), in standard 1U and 2U Dell and HP servers.
 
