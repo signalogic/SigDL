@@ -104,13 +104,17 @@ The Amazon AWS DeepLens uses a small motherboard based with an x5-E3940 CPU.  He
 
 Below are some lab pics showing internal assembly and cabling of the AIY vision kit.  The assembly is formed by attaching a daughtermodule with the Movidius MA2450 device and a v2 camera to a Raspberry Pi Zero W module.  The Zero W is required as it has a fine pitch FPC (Flexible Printed Circuit) connector for the camera.
 
-The first image shows the Raspberry Pi Zero W module by itself, without the Movidius daughtermodule attached.  The 40-pin header is used by the Raspberry Pi community for expansion purpose and to attach a wide variety of daughtermodules.  Note the camera connector at left, and also the ACT (activity LED) near the micro USB power connector, which is used to indicate boot activity.
+The first image shows the Raspberry Pi Zero W module by itself, without the Movidius daughtermodule attached.  The 40-pin header is used by the Raspberry Pi community for expansion purposes, usually in the form of attaching a wide variety of daughtermodules.  Note the camera connector at left, and also the ACT (activity LED) near the micro USB power connector, which is used to indicate boot activity.
 
 ![Image](https://github.com/signalogic/SigDL/blob/master/images/Raspberry_pi_w_zero_basic_config_w_labels.jpeg?raw=true "Raspberry Pi Zero W module without daughtermodule and camera connected")
 
 &nbsp;<br/>
 
-The second image shows the Raspberry Pi Zero W module with the Movidius vision daughtermodule attached, and the camera connected. 
+The second image shows dmesg after a Raspberry Pi Zero W boot, still without the Movidius vision module or camera attached.
+
+![Image](https://github.com/signalogic/SigDL/blob/master/images/Raspberry_pi_w_zero_basic_config_boot_dmesg.jpeg?raw=true "Raspberry Pi Zero W module boot, without daughtermodule and camera connected")
+
+The next image shows the Raspberry Pi Zero W module with the Movidius vision daughtermodule attached, and the camera connected. 
 
 ![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_internal_assembly_and_cabling.jpeg?raw=true "AIY Vision Kit, including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera")
 
