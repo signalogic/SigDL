@@ -128,7 +128,7 @@ The next set of images show the Raspberry Pi Zero W module with the Movidius vis
 
 &nbsp;<br/>
 
-The image below shows dmesg display, grepped for "googlevision", after booting with the Movidius vision module and camera attached.  Note the vision module ASIC chip is called "Myriad".  "Bonnet" is a typical Googly word for daughtermodule -- embedded system fundamental emphasis on small form-factors, low power consumption, expansion options, and other key areas haven't changed since the 
+The image below shows dmesg display, grepped for "googlevision", after booting with the Movidius vision module and camera attached.  Note the vision module ASIC chip is called "Myriad".  "Bonnet" is a typical Googly word for daughtermodule.  When solving embedded target debug and development problems, it can be helpful to keep in mind that embedded system fundamentals such as small form-factors, reduced power consumption and heat, expansion options, JTAG debug interface, and other key areas haven't changed since the 
 1990s, even if Google would like to apply new terminology.
 
 ![Image](https://github.com/signalogic/SigDL/blob/master/images/Raspberry_pi_w_zero_Myriad_vision_module_boot.jpeg?raw=true "dmesg display after booting Raspberry Pi Zero W module with Movidius MA2450 module and v2 camera attached")
