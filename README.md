@@ -79,7 +79,7 @@ Notes about the above flow diagram:
 
 2) The initial training block assumes use of GPU boards of some type.
 
-3) The "Re-Training" block depends on "device accurate" emulation of the embedded target; its situation is completely different than the "Training" block (see above model compression notes).
+3) The "Re-Training" block depends on "device accurate" emulation of the embedded target.  It can also be accelerated; however its situation with respect training results, especially accuracy and performance measurement, is completely different than the "Training" block (see above model compression notes).
 
 4) Testing can potentially be parallelized also, for example in cases where multiple compression models are concurrently being evaluated.
 
