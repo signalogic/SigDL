@@ -43,7 +43,7 @@ Below is a flow diagram showing the multi-iterative, multi-testpoint nature of m
 
 &nbsp;<br/>
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/Deep_Learning_Model_Compression_Flow_RevA2.png?raw=true "Deep learning model compression flow diagram")
+![Image](https://github.com/signalogic/SigDL/blob/master/images/Deep_Learning_Model_Compression_Flow_RevA3.png?raw=true "Deep learning model compression flow diagram")
 
 &nbsp;<br/>
 
@@ -63,8 +63,19 @@ Notes about the above flow diagram:
 <a name="AccelerationFlowDiagram"></a>
 ## Acceleration Flow Diagram
 
+Below is a flow diagram showing deep learning model acceleration.  Like model compression above, the process is multi-iterative with multiple test points.  In this case, the focus is on accelerating model training, for example reducing training time to a day or several hours or possibly less.  When combined with model compression, the primary objective is to map continuous integration and continuous deployment (CICD) onto available server resources (i.e. public cloud and/or private servers) and embedded targets (i.e. IoT and Edge products).
 
 &nbsp;<br/>
+
+![Image](https://github.com/signalogic/SigDL/blob/master/images/Deep_Learning_Model_Acceleration_Flow_RevA1.png?raw=true "Deep learning model acceleration flow diagram")
+
+&nbsp;<br/>
+
+Notes about the above flow diagram:
+
+1) Training blocks are accelerated by parallelizing either (i) the training data set or (ii) the deep learning model.  Data set parallelization is used more often.  [This page](http://timdettmers.com/2014/10/09/deep-learning-data-parallelism) has a good explanation of the tradeoffs in these two approaches.
+
+2) Testing can potentially be parallelized also, for example in cases where multiple compression models are concurrently being evaluated.
 
 <a name="SupportedEmbeddedTargets"></a>
 # Deep Learning Embedded Targets
