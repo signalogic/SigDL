@@ -20,9 +20,9 @@ Functionality includes:
 # Table of Contents
 
 [Model Compression](#ModelCompression)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Compression Flow Diagram](#CompressionFlowDiagram)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Model Compression Flow Diagram](#CompressionFlowDiagram)<br/>
 [Model Acceleration](#ModelAcceleration)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Acceleration Flow Diagram](#AccelerationFlowDiagram)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Model Acceleration Flow Diagram](#AccelerationFlowDiagram)<br/>
 [Deep Learning Embedded Targets](#SupportedEmbeddedTargets)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Nvidia Jetson TX2](#NvidiaJetsonTX2)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Atom (Intel) x5-E3940](#IntelX5E3940)<br/>
@@ -37,7 +37,7 @@ Model compression is the process of compressing and transforming a deep learning
 Whatever compression methods are chosen, the model <i>must be retrained</i> using fixed-point weight values, alternative math, and other algorithm changes due to compression, in order to reach an acceptable loss in accuracy (typically 2-3%).  The process of training, testing, compression, more testing, and retraining may require many iterations until acceptable tradeoffs are reached.  This is a time-consuming, iterative process and must be done on high performance cloud servers and not on the embedded target, where it would take prohibitive amounts of time.
 
 <a name="CompressionFlowDiagram"></a>
-## Compression Flow Diagram
+## Model Compression Flow Diagram
 
 Below is a flow diagram showing the multi-iterative, multi-testpoint nature of model compression.  The objective is to map continuous integration and continuous deployment (CICD) onto available server resources (i.e. public cloud and/or private servers) and embedded targets (i.e. IoT and Edge products).
 
@@ -61,7 +61,7 @@ Notes about the above flow diagram:
 # Model Acceleration
 
 <a name="AccelerationFlowDiagram"></a>
-## Acceleration Flow Diagram
+## Model Acceleration Flow Diagram
 
 In the following description, "acceleration" refers to fast-as-possible training performance in the cloud, using whatever cloud resources are available or can be procurred.  Some deep learning researchers refer to acceleration to mean inference performance improvement; for embedded targets, this is an incorrect usage as the question is simply whether the embedded target / product is running inference in real-time or not.  I.e. for video or image based applications, does performance meet the fps (frames per sec) product requirement ?  The answer is a function of model compression and the resulting inference run-time, not training.
 
