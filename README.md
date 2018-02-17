@@ -65,6 +65,8 @@ If he embedded target contains an Nvidia SoC, then Nvidia GPU boards with the sa
 <a name="AccelerationFlowDiagram"></a>
 ## Acceleration Flow Diagram
 
+In the following description, "acceleration" refers to fast-as-possible cloud performance, using whatever cloud resources are available or can be procurred.  Some deep learning researchers refer to acceleration to mean inference performance improvement; for embedded targets, this is an incorrect usage as the question is simply whether the embedded target / product is operating in real-time or not.  I.e. for video or image based applications, does performance meet the fps (frames per sec) product requirement ?  The answer is a function of model compression and the resulting inference run-time, not Training or Re-Training.
+
 Below is a flow diagram showing deep learning model acceleration.  Like model compression above, the process is multi-iterative with multiple test points.  In this case, the focus is on accelerating model training, for example reducing training time to a day or several hours, or possibly less.  When combined with model compression, the primary objective is to map continuous integration and continuous deployment (CICD) onto available server resources (i.e. public cloud and/or private servers) and embedded targets (i.e. IoT and Edge products).
 
 &nbsp;<br/>
