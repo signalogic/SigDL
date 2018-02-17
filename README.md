@@ -51,7 +51,9 @@ Notes about the above flow diagram:
 
 1) All testing blocks include non-real-time inference.  An inference block is shown explicitly when real-time performance is required.
 
-2) Embedded target testing depends in part on how well cloud testing can emulate the target; for example if cloud testing is not possible with PCIe cards containing the same CPU/SoC devices (ARM, NPU, DSP, ASIC, etc) then it's likely that embedded target testing will be needed to measure model real-time performance and accuracy.  For embedded targets using x86 CPU and/or GPU devices, limits on number of cores, clock rate, available memory, etc. can be enforced during cloud testing in order to give reliable predictions of real-time performance and accuracy.  In all cases, power consumption must be measured on the embedded target.
+2) Embedded target testing -- specifically the "Re-Training" block -- depends in part on how well cloud testing can emulate the target; for example if cloud testing is not possible with PCIe cards containing the same CPU/SoC devices (ARM, NPU, DSP, ASIC, etc) then it's likely that embedded target testing will be needed to measure model real-time performance and accuracy.  For embedded targets using x86 CPU and/or GPU devices, limits on number of cores, clock rate, available memory, etc. can be enforced during cloud testing in order to give reliable predictions of real-time performance and accuracy.  In all cases, power consumption must be measured on the embedded target.
+
+If he embedded target contains an Nvidia SoC, then Nvidia GPU boards with the same CUDA and/or Tensor core type can be used for Re-Training.  If the embedded target uses x86 CPU cores, then x86 server CPUs can be used for Re-Training (preferably using the same generation of x86 chip architecture).  If the embedded target contains an SoC or CPU type that doesn't have an equivalent PCIe card (e.g. Intel Movidus) -- or it does but for whatever reason the vendor doesn't incorporate the PCIe card into their deep learning software tools (e.g. Texas Instruments) -- then a "translator" tool or module is required.  A cross-chip "translation" approach to model compression is likely to be problematic, for example the translator software may be closed source, or not well supported by the vendor.
 
 3) Compression requires math and algorithm expertise and tradeoff analysis.  Some concepts are basic such as quantization and weight sharing, others require advanced math, for example sparse matrix and FFT based computation.
 
@@ -63,7 +65,7 @@ Notes about the above flow diagram:
 <a name="AccelerationFlowDiagram"></a>
 ## Acceleration Flow Diagram
 
-Below is a flow diagram showing deep learning model acceleration.  Like model compression above, the process is multi-iterative with multiple test points.  In this case, the focus is on accelerating model training, for example reducing training time to a day or several hours or possibly less.  When combined with model compression, the primary objective is to map continuous integration and continuous deployment (CICD) onto available server resources (i.e. public cloud and/or private servers) and embedded targets (i.e. IoT and Edge products).
+Below is a flow diagram showing deep learning model acceleration.  Like model compression above, the process is multi-iterative with multiple test points.  In this case, the focus is on accelerating model training, for example reducing training time to a day or several hours, or possibly less.  When combined with model compression, the primary objective is to map continuous integration and continuous deployment (CICD) onto available server resources (i.e. public cloud and/or private servers) and embedded targets (i.e. IoT and Edge products).
 
 &nbsp;<br/>
 
@@ -75,7 +77,11 @@ Notes about the above flow diagram:
 
 1) Training blocks are accelerated by parallelizing either (i) the training data set or (ii) the deep learning model.  Data set parallelization is used more often.  [This page](http://timdettmers.com/2014/10/09/deep-learning-data-parallelism) has a good explanation of the tradeoffs in these two approaches.
 
-2) Testing can potentially be parallelized also, for example in cases where multiple compression models are concurrently being evaluated.
+2) The initial training block assumes use of GPU boards of some type.
+
+3) The "Re-Training" block depends on "device accurate" emulation of the embedded target; its situation is completely different than the "Training" block (see above model compression notes).
+
+4) Testing can potentially be parallelized also, for example in cases where multiple compression models are concurrently being evaluated.
 
 <a name="SupportedEmbeddedTargets"></a>
 # Deep Learning Embedded Targets
