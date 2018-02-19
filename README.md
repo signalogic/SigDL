@@ -43,7 +43,7 @@ Below is a flow diagram showing the multi-iterative, multi-testpoint nature of m
 
 &nbsp;<br/>
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/Deep_Learning_Model_Compression_Flow_Diagram_RevA4.png?raw=true "Deep learning model compression flow diagram")
+![Deep learning model compression flow diagram](https://github.com/signalogic/SigDL/blob/master/images/Deep_Learning_Model_Compression_Flow_Diagram_RevA4.png?raw=true "Deep learning model compression flow diagram")
 
 &nbsp;<br/>
 
@@ -69,7 +69,7 @@ Below is a flow diagram showing deep learning model acceleration.  Like model co
 
 &nbsp;<br/>
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/Deep_Learning_Model_Acceleration_Flow_Diagram_RevA2.png?raw=true "Deep learning model acceleration flow diagram")
+![Deep learning model acceleration flow diagram](https://github.com/signalogic/SigDL/blob/master/images/Deep_Learning_Model_Acceleration_Flow_Diagram_RevA2.png?raw=true "Deep learning model acceleration flow diagram")
 
 &nbsp;<br/>
 
@@ -93,17 +93,17 @@ Work is ongoing to support the following embedded targets with SigDL software.
 
 Below is an image showing the Jetson TX2 board set up in the lab, with key TX2 peripherals labeled.  Note the small camera daughtercard at right.
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/Jetson_TX2_in_lab_with_labels2.jpg?raw=true "Nvidia Jetson TX2 board in the lab, with peripherals labeled")
+![Nvidia TX2 Jetson board in the lab, with peripherals labeled](https://github.com/signalogic/SigDL/blob/master/images/Jetson_TX2_in_lab_with_labels2.jpg?raw=true "Nvidia Jetson TX2 board in the lab, with peripherals labeled")
 
 &nbsp;<br/>
 
 Below is an image showing an expanded view of the Jetson TX2 board set up in the lab.  Note the requirement for a USB hub to use the integrated keyboard and mouse, and also the "TTL to USB" cable required for a serial debug console.
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/Jetson_TX2_in_lab_with_peripherals.jpg?raw=true "Nvidia Jetson TX2 board in the lab, expanded view, with external peripherals labeled")
+![Nvidia Jetson TX2 board in the lab, expanded view, with external peripherals labeled](https://github.com/signalogic/SigDL/blob/master/images/Jetson_TX2_in_lab_with_peripherals.jpg?raw=true "Nvidia Jetson TX2 board in the lab, expanded view, with external peripherals labeled")
 
 Below the "ocean FFT" and "random fog" CUDA demos are running.  For deep learning, inference run-times can be downloaded and run via remote log-in, which is a requirement for CIDC cloud based model compression, as described above.
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/Jetson_TX2_in_lab_CUDA_demos.jpg?raw=true "Nvidia Jetson TX2 board running CUDA demos, using remote download and run")
+![Nvidia Jetson TX2 board running CUDA demos, using remote download and run](https://github.com/signalogic/SigDL/blob/master/images/Jetson_TX2_in_lab_CUDA_demos.jpg?raw=true "Nvidia Jetson TX2 board running CUDA demos, using remote download and run")
 
 &nbsp;<br/>
 
@@ -112,7 +112,7 @@ Below the "ocean FFT" and "random fog" CUDA demos are running.  For deep learnin
 
 The Amazon AWS DeepLens uses a small motherboard based with an x5-E3940 CPU.  Here is a similar commercially available board <sup>1</sup>:
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/E3940_miniITX_conga-IA5_web.png?raw=true "x5-E3940 quad core Atom mini-ITX board")
+![x5-E3940 quad core Atom mini-ITX board](https://github.com/signalogic/SigDL/blob/master/images/E3940_miniITX_conga-IA5_web.png?raw=true "x5-E3940 quad core Atom mini-ITX board")
 
 <sup>1 </sup>Note - the above image is a web pic, we don't have one in our lab yet.
 
@@ -123,32 +123,32 @@ Below are some lab pics showing internal assembly and cabling of the AIY vision 
 
 The image below shows the Raspberry Pi Zero W module by itself, without the Movidius daughtermodule attached.  The 40-pin header is used by the Raspberry Pi community for expansion purposes, usually in the form of attaching a wide variety of daughtermodules.  Note the camera connector at left, and also the ACT (activity LED) near the micro USB power connector, which is used to indicate boot activity.
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/Raspberry_pi_w_zero_basic_config_w_labels.jpeg?raw=true "Raspberry Pi Zero W module without daughtermodule and camera connected")
+![Raspberry Pi Zero W module without daughtermodule and camera connected](https://github.com/signalogic/SigDL/blob/master/images/Raspberry_pi_w_zero_basic_config_w_labels.jpeg?raw=true "Raspberry Pi Zero W module without daughtermodule and camera connected")
 
 &nbsp;<br/>
 
 The image below shows dmesg after a Raspberry Pi Zero W boot, still without the Movidius vision module or camera attached.  Note that the Raspberry Pi SoC contains a simple onchip boot loader which does a few SoC initialization steps, but from that point forward is entirely dependent on micro SD card contents (the boot process is [documented on this stackexchange thread](https://raspberrypi.stackexchange.com/questions/10489/how-does-raspberry-pi-boot/10490#10490)).
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/Raspberry_pi_w_zero_basic_config_boot_dmesg.jpeg?raw=true "Raspberry Pi Zero W module boot, without daughtermodule and camera connected")
+![Raspberry Pi Zero W module boot, without daughtermodule and camera connected](https://github.com/signalogic/SigDL/blob/master/images/Raspberry_pi_w_zero_basic_config_boot_dmesg.jpeg?raw=true "Raspberry Pi Zero W module boot, without daughtermodule and camera connected")
 
 The next set of images show the Raspberry Pi Zero W module with the Movidius vision daughtermodule attached, and the camera connected, from different perspectives. 
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_internal_assembly_and_cabling.jpeg?raw=true "AIY Vision Kit, including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera")
+![AIY Vision Kit, including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_internal_assembly_and_cabling.jpeg?raw=true "AIY Vision Kit, including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera")
 
 &nbsp;<br/>
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_partial_assembly2.jpeg?raw=true "AIY Vision Kit partial assembly (including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera")
+![AIY Vision Kit partial assembly (including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_partial_assembly2.jpeg?raw=true "AIY Vision Kit partial assembly (including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera")
 
 &nbsp;<br/>
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_partial_assembly3.jpeg?raw=true "AIY Vision Kit partial assembly (including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera")
+![AIY Vision Kit partial assembly (including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera](https://github.com/signalogic/SigDL/blob/master/images/AIY_Movidius_partial_assembly3.jpeg?raw=true "AIY Vision Kit partial assembly (including Raspberry Pi Zero W module, Movidius MA2450 module, and v2 camera")
 
 &nbsp;<br/>
 
 The image below shows dmesg display, grepped for "googlevision", after booting with the Movidius vision module and camera attached.  Note the vision module ASIC chip is called "Myriad".  "Bonnet" is a typical Googly word for daughtermodule.  When solving embedded target debug and development problems, it can be helpful to keep in mind that embedded system fundamentals such as small form-factors, reduced power consumption and heat, expansion options, JTAG debug interface, and other key areas haven't changed since the 
 1990s, even if Google would like to apply new terminology.
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/Raspberry_pi_w_zero_Myriad_vision_module_boot.jpeg?raw=true "dmesg display after booting Raspberry Pi Zero W module with Movidius MA2450 module and v2 camera attached")
+![dmesg display after booting Raspberry Pi Zero W module with Movidius MA2450 module and v2 camera attached](https://github.com/signalogic/SigDL/blob/master/images/Raspberry_pi_w_zero_Myriad_vision_module_boot.jpeg?raw=true "dmesg display after booting Raspberry Pi Zero W module with Movidius MA2450 module and v2 camera attached")
 
 &nbsp;<br/>
 
@@ -161,19 +161,19 @@ As a potential basis for a c66x device-accurate deep learning cloud solution, th
 
 The images below show multiple 64-core PCIe cards (up to 384 or more c66x cores depending on server form-factor, suitable for training on high resolution data sets), in standard 1U and 2U Dell and HP servers.
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/Dell_R720_128_c66x_cores.jpg?raw=true "Dell R720 server with 128 c66x cores, suitable for cloud based deep learning training, testing, and model compression")
+![Dell R720 server with 128 c66x cores, suitable for cloud based deep learning training, testing, and model compression](https://github.com/signalogic/SigDL/blob/master/images/Dell_R720_128_c66x_cores.jpg?raw=true "Dell R720 server with 128 c66x cores, suitable for cloud based deep learning training, testing, and model compression")
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/HP_DL380_G9_128_c66x_cores.jpg?raw=true "HP DL380 server with 128 c66x cores, suitable for cloud based deep learning training, testing, and model compression")
+![HP DL380 server with 128 c66x cores, suitable for cloud based deep learning training, testing, and model compression](https://github.com/signalogic/SigDL/blob/master/images/HP_DL380_G9_128_c66x_cores.jpg?raw=true "HP DL380 server with 128 c66x cores, suitable for cloud based deep learning training, testing, and model compression")
 
 For detailed information on the underlying technology of combined c66x + x86 architecture solutions, see the TI wiki pages for [HPC](http://processors.wiki.ti.com/index.php/HPC), [c66x OpenCV](http://processors.wiki.ti.com/index.php/C66x_opencv), and [NFV Transcoding](http://processors.wiki.ti.com/index.php/NFV_Transcoding).
 
 In addition to the above "pure cloud" solutions, the combined c66x + x86 architecture can also target small-form factor servers in the 30 to 70 W range.  The images below show a combination of Atom x86 and TI c66x cores in a mini-ITX format, with 32 to 64 c66x cores accessible as half-size PCIe card(s).
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/deep_learning_c66x_x86_server_32cores_iso_view.png?raw=true "TI c66x + x86 deep learning small server solution, using mini-ITX (iso view)")
+![TI c66x + x86 deep learning small server solution, using mini-ITX (iso view)](https://github.com/signalogic/SigDL/blob/master/images/deep_learning_c66x_x86_server_32cores_iso_view.png?raw=true "TI c66x + x86 deep learning small server solution, using mini-ITX (iso view)")
 
 In the mini-ITX images, the motherboard is a dual core Atom (C2358 @ 1.74 GHz) with 4x GbE interfaces, and 8 GB DDR3 mem @ 1333 MHz.  A more suitable motherboard would be a x5-E3940 quad core Atom, with either a x4 or x8 PCIe slot (or mPCIe interface).
 
-![Image](https://github.com/signalogic/SigDL/blob/master/images/deep_learning_c66x_x86_server_32cores_top_view.png?raw=true "TI c66x + x86 deep learning small server solution, using mini-ITX (top view)")
+![TI c66x + x86 deep learning small server solution, using mini-ITX (top view)](https://github.com/signalogic/SigDL/blob/master/images/deep_learning_c66x_x86_server_32cores_top_view.png?raw=true "TI c66x + x86 deep learning small server solution, using mini-ITX (top view)")
 
 As an interesting side note, besides x86 it's also possible to combine a half-size c66x PCIe card Tegra GPU SoCs, for example the Jetson TX2 board has an x4 PCIe slot (see Jetson pics above).  What could be done with a next-gen Tegra (say 128 CUDA cores and 128 Tensor cores) and 32 c66x cores ?
 
