@@ -75,7 +75,7 @@ Below is a flow diagram showing deep learning model acceleration.  Like model co
 
 Notes about the above flow diagram:
 
-1) Training blocks are accelerated by parallelizing either (i) the training data set or (ii) the deep learning model.  Data set parallelization is used more often.  [This page](http://timdettmers.com/2014/10/09/deep-learning-data-parallelism) has a good explanation of the tradeoffs in these two approaches.
+1) Training blocks are accelerated by parallelizing either (i) the training data set or (ii) the deep learning model.  Data set parallelization is used more often.  Tim Dettmer's [Parallelize Deep Learning on GPUs page](http://timdettmers.com/2014/10/09/deep-learning-data-parallelism) has a good explanation of the tradeoffs in these two approaches.
 
 2) The initial Training block assumes use of GPU boards of some type.
 
