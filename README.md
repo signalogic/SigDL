@@ -19,9 +19,9 @@ Functionality includes:
 
 # Table of Contents
 
-[Model Compression](#ModelCompression)<br/>
+[Deep Learning Model Compression](#DeepLearningModelCompression)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Model Compression Flow Diagram](#CompressionFlowDiagram)<br/>
-[Model Acceleration](#ModelAcceleration)<br/>
+[Deep Learning Model Acceleration](#DeepLearningModelAcceleration)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Model Acceleration Flow Diagram](#AccelerationFlowDiagram)<br/>
 [Deep Learning Embedded Targets](#SupportedEmbeddedTargets)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Nvidia Jetson TX2](#NvidiaJetsonTX2)<br/>
@@ -29,8 +29,8 @@ Functionality includes:
 &nbsp;&nbsp;&nbsp;&nbsp;[Movidius (Intel) MA2450 Neural Net Chip](#MovidiusMA2450)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Texas Instruments c66x (pending, see notes)](#TexasInstrumentsC66x)<br/>
 
-<a name="ModelCompression"></a>
-# Model Compression
+<a name="DeepLearningModelCompression"></a>
+# Deep Learning Model Compression
 
 Model compression is the process of compressing and transforming a deep learning model trained and tested in the cloud into a model suitable for real-time inference on an IoT or Edge application embedded target.  When tested on the embedded target with the identical data set used in cloud training, the model must perform with acceptable accuracy, real-time performance (for example, frames per sec), and meet strict power consumption requirements.  Compression methods include basic approaches such as pruning, weight quantization and sharing, and weight encoding (for example Huffman coding), and more advanced approaches such as math architecture that converts convolution layers to sparse matrices (under specific conditions) suitable for FFT processing; i.e. convolution in the frequency domain.
 
@@ -51,14 +51,14 @@ Notes about the above flow diagram:
 
 1) All testing blocks include non-real-time inference.  An inference block is shown explicitly when real-time performance is required.
 
-2) Embedded target testing -- specifically the "Re-Training" block -- depends in part on how well cloud based compression testing can emulate the target.  If cloud testing is not possible with PCIe cards containing the same CPU/SoC devices (ARM, NPU, DSP, ASIC, etc) -- or software emulation is used (e.g. a "translater" or "optimizer" module of some type) -- then it's likely that embedded target testing will be needed to verify model real-time performance and accuracy.  In all cases, power consumption must be measured on the embedded target.<br/>&nbsp;<br/>If the embedded target contains an Nvidia SoC, then Nvidia GPU boards with the same CUDA and/or Tensor core type can be used for Re-Training.  If the embedded target uses x86 CPU cores, then x86 server CPUs can be used for Re-Training (preferably the same generation of x86 chip architecture).  For embedded targets using x86 CPU and/or GPU devices, limits on number of cores, clock rate, available memory, etc. can be enforced during cloud testing in order to give reliable predictions of real-time performance and accuracy.<br/>&nbsp;<br/>If the embedded target contains an SoC or CPU type that doesn't have an equivalent PCIe card (e.g. Intel Movidius) -- or it does but for whatever reason the vendor doesn't incorporate the PCIe card into their deep learning software tools (e.g. Texas Instruments) -- then a "translator" tool or module is required.  Such cross-chip approaches to model compression, re-training, and testing are likely to be problematic, for example the translator software may be closed source, may take excessive time to run (and not allow parallelization), may not precisely emulate the target, or in the worst case, may not be well supported by the vendor.
+2) Embedded target testing -- specifically the "Re-Training" block -- depends in part on how well cloud based compression testing can emulate the target.  If cloud testing is not possible with PCIe cards containing the same CPU/SoC devices (ARM, NPU, DSP, ASIC, etc) -- or software emulation is used (e.g. a "translater" or "optimizer" module of some type) -- then it's likely that embedded target testing will be needed to verify model real-time performance and accuracy.  In all cases, power consumption must be measured on the embedded target.<br/>&nbsp;<br/>If the embedded target contains an Nvidia SoC, then Nvidia GPU boards with the same CUDA and/or Tensor core type can be used for Re-Training.  If the embedded target uses x86 CPU cores, then x86 server CPUs can be used for Re-Training (preferably the same generation of x86 chip architecture).  For embedded targets using x86 CPU and/or GPU devices, limits on number of cores, clock rate, available memory, etc. can be enforced during cloud testing in order to give reliable predictions of real-time performance and accuracy.<br/>&nbsp;<br/>If the embedded target contains an SoC or CPU type that doesn't have an equivalent PCIe card (e.g. Intel Movidius) -- or it does but for whatever reason the vendor doesn't incorporate the PCIe card in their deep learning software tools (e.g. Texas Instruments) -- then a "translator" tool or module is required.  Such cross-chip approaches to model compression, re-training, and testing are likely to be problematic, for example the translator software may be closed source, may take excessive time to run (and not allow parallelization), may not precisely emulate the target, or in the worst case, may not be well supported by the vendor.
 
 3) Compression requires math and algorithm expertise and tradeoff analysis.  Some concepts are basic such as quantization and weight sharing, others require advanced math, for example sparse matrix and FFT based computation.
 
 4) It's expected that embedded targets will incorporate data acquisition for additional training and performance adaptation.  This leads to the CICD requirement, as noted above.
 
-<a name="ModelAcceleration"></a>
-# Model Acceleration
+<a name="DeepLearningModelAcceleration"></a>
+# Deep Learning Model Acceleration
 
 <a name="AccelerationFlowDiagram"></a>
 ## Model Acceleration Flow Diagram
