@@ -110,11 +110,19 @@ Below the "ocean FFT" and "random fog" CUDA demos are running.  For deep learnin
 <a name="IntelX5E3940"></a>
 ## Atom x5-E3940
 
-The Amazon AWS DeepLens uses a small motherboard based with an x5-E3940 CPU.  Here is a similar commercially available board <sup>1</sup>:
+Below is a view inside Amazon's AWS DeepLens, which uses a small motherboard containing an Atom x5-E3940 quad-core CPU:
 
-![x5-E3940 quad core Atom mini-ITX board](https://github.com/signalogic/SigDL/blob/master/images/E3940_miniITX_conga-IA5_web.png?raw=true "x5-E3940 quad core Atom mini-ITX board")
+![AWS DeepLens with Atom x5-E3940 quad-core CPU on small form-factor motherboard](https://github.com/signalogic/SigDL/blob/master/images/AWS_DeepLens_inside_view_x5-3940.png?raw=true "inside view of AWS DeepLens with Atom x5-E3940 small motherboard")
+
+&nbsp;<br/>
+
+Here is a commercially available mini-ITX form-factor board, also with an Atom x5-E3940 quad-core CPU <sup>1</sup>
+
+![x5-E3940 quad-core Atom CPU mini-ITX board](https://github.com/signalogic/SigDL/blob/master/images/E3940_miniITX_conga-IA5_web.png?raw=true "x5-E3940 quad core Atom CPU mini-ITX board")
 
 <sup>1 </sup>Note - the above image is a web pic, we don't have one in our lab yet.
+
+&nbsp;<br/>
 
 <a name="MovidiusMA2450"></a>
 ## Movidius MA2450 Neural Net Chip
