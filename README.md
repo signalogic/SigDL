@@ -118,11 +118,11 @@ Below is a partial disassembly view of Amazon's AWS DeepLens.  Note the small fo
 
 Below is a top (component) side view of the AWS DeepLens motherboard:
 
-![AWS DeepLens with Atom x5-E3940 quad-core CPU on small form-factor motherboard (component side view)](https://github.com/signalogic/SigDL/blob/master/images/DeepLens_mnotherboard_component_side.jpg?raw=true "component side view of AWS DeepLens motherboard with Atom x5-E3940")
+![AWS DeepLens with Atom x5-E3940 quad-core CPU on small form-factor motherboard (component side view)](https://github.com/signalogic/SigDL/blob/master/images/DeepLens_motherboard_component_side_with_labels.jpg?raw=true "component side view of AWS DeepLens motherboard with Atom x5-E3940")
 
 &nbsp;<br/>
 
-![AWS DeepLens with Atom x5-E3940 quad-core CPU on small form-factor motherboard (solder side view)](https://github.com/signalogic/SigDL/blob/master/images/DeepLens_mnotherboard_solder_side.jpg?raw=true "solder side view of AWS DeepLens motherboard with Atom x5-E3940")
+![AWS DeepLens with Atom x5-E3940 quad-core CPU on small form-factor motherboard (solder side view)](https://github.com/signalogic/SigDL/blob/master/images/DeepLens_motherboard_solder_side.jpg?raw=true "solder side view of AWS DeepLens motherboard with Atom x5-E3940")
 
 &nbsp;<br/>
 
