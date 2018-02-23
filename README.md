@@ -120,6 +120,8 @@ Below is a top (component) side view of the AWS DeepLens motherboard:
 
 ![AWS DeepLens with Atom x5-E3940 quad-core CPU on small form-factor motherboard (component side view)](https://github.com/signalogic/SigDL/blob/master/images/DeepLens_motherboard_component_side_with_labels.jpg?raw=true "component side view of AWS DeepLens motherboard with Atom x5-E3940")
 
+To reduce power consumption, Samsung LPDDR4 DRAM is used, providing 8 GB of 64-bit memory at a 3733 Mbps transfer rate (clock rate 233 MHz, 4x 16 Gb chips organized as x16).  Non-volatile storage is provided by an SK Hynix 16 GB NAND Flash.
+
 &nbsp;<br/>
 
 Below is a bottom (solder) side view of the AWS DeepLens motherboard:
