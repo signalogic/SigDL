@@ -112,7 +112,7 @@ Below the "ocean FFT" and "random fog" CUDA demos are running.  For deep learnin
 <a name="IntelX5E3940"></a>
 ## Atom x5-E3940
 
-The embedded targets below use Atom x5-E39xx family CPUs, but vary in SWaP<sup> 2</sup>.
+The embedded targets below use Atom x5-E39xx family CPUs, but vary in SWaP<sup> 1</sup>.
 
 <a name="DeepLens_Atom"></a>
 ### Amazon DeepLens
@@ -140,11 +140,11 @@ Below is a bottom (solder) side view of the AWS DeepLens motherboard:
 <a name="miniITX_Atom"></a>
 ### Commercial mini-ITX
 
-Here is a commercially available mini-ITX form-factor board, also with an Atom x5-E3940 quad-core CPU similar to the DeepLens<sup>2</sup>
+Here is a commercially available mini-ITX form-factor board, also with an Atom x5-E3940 quad-core CPU similar to the DeepLens<sup> 2</sup>
 
 ![x5-E3940 quad-core Atom CPU mini-ITX board](https://github.com/signalogic/SigDL/blob/master/images/E3940_miniITX_conga-IA5_web.png?raw=true "x5-E3940 quad core Atom CPU mini-ITX board")
 
-<sup>1 </sup>SWaP = size, weight, and power consumption.
+<sup>1 </sup>SWaP = size, weight, and power consumption.<br/>
 <sup>2 </sup>The commercial mini-ITX image is a web pic, we don't have one in our lab yet.
 
 &nbsp;<br/>
