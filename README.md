@@ -71,7 +71,7 @@ Below is a flow diagram showing deep learning model acceleration.  Like model co
 
 &nbsp;<br/>
 
-![Deep learning model acceleration flow diagram](https://github.com/signalogic/SigDL/blob/master/images/Deep_Learning_Model_Acceleration_Flow_Diagram_RevA2.png?raw=true "Deep learning model acceleration flow diagram")
+![Deep learning model acceleration flow diagram](https://github.com/signalogic/SigDL/blob/master/images/Deep_Learning_Model_Acceleration_Flow_Diagram_RevA2.png "Deep learning model acceleration flow diagram")
 
 &nbsp;<br/>
 
