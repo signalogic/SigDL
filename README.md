@@ -110,13 +110,23 @@ Below the "ocean FFT" and "random fog" CUDA demos are running.  For deep learnin
 <a name="IntelX5E3940"></a>
 ## Atom x5-E3940
 
-Below is a view inside Amazon's AWS DeepLens, which uses a small motherboard containing an Atom x5-E3940 quad-core CPU:
+Below is a partial disassembly view of Amazon's AWS DeepLens.  Note the small form-factor motherboard, with fine-pitch connector and small package size technology similar to a cell phone (e.g. 0201 and 1005 discrete components).  An Atom x5-E3940 quad-core CPU is under the heat sink.
 
-![AWS DeepLens with Atom x5-E3940 quad-core CPU on small form-factor motherboard](https://github.com/signalogic/SigDL/blob/master/images/AWS_DeepLens_inside_view_x5-3940.png?raw=true "inside view of AWS DeepLens with Atom x5-E3940 small motherboard")
+![AWS DeepLens with Atom x5-E3940 quad-core CPU on small form-factor motherboard](https://github.com/signalogic/SigDL/blob/master/images/DeepLens_disassembly1.jpg?raw=true "partial disassembly view of AWS DeepLens motherboard.  The Atom x5-E3940 quad-core CPU is under the heat sink")
 
 &nbsp;<br/>
 
-Here is a commercially available mini-ITX form-factor board, also with an Atom x5-E3940 quad-core CPU <sup>1</sup>
+Below is a top (component) side view of the AWS DeepLens motherboard:
+
+![AWS DeepLens with Atom x5-E3940 quad-core CPU on small form-factor motherboard (component side view)](https://github.com/signalogic/SigDL/blob/master/images/DeepLens_mnotherboard_component_side.jpg?raw=true "component side view of AWS DeepLens motherboard with Atom x5-E3940")
+
+&nbsp;<br/>
+
+![AWS DeepLens with Atom x5-E3940 quad-core CPU on small form-factor motherboard (solder side view)](https://github.com/signalogic/SigDL/blob/master/images/DeepLens_mnotherboard_solder_side.jpg?raw=true "solder side view of AWS DeepLens motherboard with Atom x5-E3940")
+
+&nbsp;<br/>
+
+Here is a commercially available mini-ITX form-factor board, also with an Atom x5-E3940 quad-core CPU similar to the DeepLens<sup>1</sup>
 
 ![x5-E3940 quad-core Atom CPU mini-ITX board](https://github.com/signalogic/SigDL/blob/master/images/E3940_miniITX_conga-IA5_web.png?raw=true "x5-E3940 quad core Atom CPU mini-ITX board")
 
