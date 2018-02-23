@@ -110,7 +110,7 @@ Below the "ocean FFT" and "random fog" CUDA demos are running.  For deep learnin
 <a name="IntelX5E3940"></a>
 ## Atom x5-E3940
 
-Below is a partial disassembly view of Amazon's AWS DeepLens.  Note the small form-factor motherboard, with fine-pitch connector and small package size technology similar to a cell phone (e.g. 0201 and 1005 discrete components).  An Atom x5-E3940 quad-core CPU is under the heat sink.
+Below is a partial disassembly view of Amazon's AWS DeepLens.  Note the small form-factor motherboard, incorporating fine-pitch connector and small package size technology similar to a cell phone (e.g. 0201 and 1005 discrete components).  An Atom x5-E3940 quad-core CPU is under the heat sink.
 
 ![AWS DeepLens with Atom x5-E3940 quad-core CPU on small form-factor motherboard](https://github.com/signalogic/SigDL/blob/master/images/DeepLens_disassembly1.jpg?raw=true "partial disassembly view of AWS DeepLens motherboard.  The Atom x5-E3940 quad-core CPU is under the heat sink")
 
@@ -121,6 +121,8 @@ Below is a top (component) side view of the AWS DeepLens motherboard:
 ![AWS DeepLens with Atom x5-E3940 quad-core CPU on small form-factor motherboard (component side view)](https://github.com/signalogic/SigDL/blob/master/images/DeepLens_motherboard_component_side_with_labels.jpg?raw=true "component side view of AWS DeepLens motherboard with Atom x5-E3940")
 
 &nbsp;<br/>
+
+Below is a bottom (solder) side view of the AWS DeepLens motherboard:
 
 ![AWS DeepLens with Atom x5-E3940 quad-core CPU on small form-factor motherboard (solder side view)](https://github.com/signalogic/SigDL/blob/master/images/DeepLens_motherboard_solder_side.jpg?raw=true "solder side view of AWS DeepLens motherboard with Atom x5-E3940")
 
