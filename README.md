@@ -45,7 +45,11 @@ Below is a flow diagram showing the multi-iterative, multi-testpoint nature of m
 
 &nbsp;<br/>
 
+<!---  old way, image not discoverable by Google
 ![Deep learning model compression flow diagram](https://github.com/signalogic/SigDL/blob/master/images/Deep_Learning_Model_Compression_Flow_Diagram_RevA4.png "Deep learning model compression flow diagram")
+--->
+
+![Deep learning model compression flow diagram](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Deep_Learning_Model_Compression_Flow_Diagram_RevA4.png "Deep learning model compression flow diagram")
 
 &nbsp;<br/>
 
