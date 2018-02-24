@@ -11,11 +11,11 @@ The SigDL SDK provides binary libraries, example C/C++ and Python source code, a
 
 Functionality includes:
 
- - support for deep learning models AlexNet, VGG-16, LeNet-5 and LeNet-300, and MobileNets
+ - Support for deep learning models AlexNet, VGG-16, LeNet-5 and LeNet-300, and MobileNets
  
- - a process flow loop for cloud training and testing, compression, and embedded target training and testing
+ - Process flow loop for cloud training and testing, compression, and embedded target training and testing
  
- - support for embedded targets Nvidia Jetson TX2 (Parker SoC, Pascal GPU), Atom x5-E3940 (quad-core 1.3 GHz), and Movidius MA2450
+ - Support for embedded targets Nvidia Jetson TX2 (Parker SoC, Pascal GPU), Atom x5-E3940 (quad-core 1.3 GHz), and Movidius MA2450
 
 # Table of Contents
 
@@ -92,7 +92,7 @@ Notes about the above flow diagram:
 <a name="SupportedEmbeddedTargets"></a>
 # Deep Learning Embedded Targets
 
-Work is ongoing to support the following embedded targets with SigDL software.
+Work is ongoing to support the following embedded targets with SigDL software.  The following sections take a closer look at available deep learning product platforms and form-factors that range in power consumption from 2 to 30 W.
 
 <a name="NvidiaJetsonTX2"></a>
 ## Nvidia Jetson TX2
