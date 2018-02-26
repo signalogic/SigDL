@@ -116,12 +116,14 @@ Below the "ocean FFT" and "random fog" CUDA demos are running.  For deep learnin
 <a name="IntelAtom"></a>
 ## Intel Atom
 
-The deep learning embedded targets below use Atom x5-E39xx family CPUs, but vary in SWaP<sup> 1</sup>, making them suitable for IoT and Edge products with power consumption ranging of 7 to 15 W.  Using an x86 compatible CPU offers advantages in (i) compatibility with a wide variety of software, (ii) fast development time, and (iii) support for a huge range of I/O and storage peripherals.
+The deep learning embedded targets below use Atom x5-E39xx family CPUs, but vary in SWaP<sup> 1</sup>, making them suitable for IoT and Edge products with power consumption ranging from 7 to 15 W.  Using an x86 compatible CPU offers advantages in (i) compatibility with a wide variety of software, (ii) fast development time, and (iii) support for a huge range of I/O and storage peripherals.
 
 <a name="DeepLens_Atom"></a>
 ### Amazon DeepLens
 
-Below is a partial disassembly view of the Amazon AWS DeepLens.  In terms of SWaP, the DeepLens represents the current state-of-the-art lower boundary for x86 CPU based deep learning IoT and Edge products.  Note the small form-factor motherboard, incorporating fine-pitch connector and small-package technology similar to cell phones (such as 0201 and 1005 discrete components).  An Atom x5-E3930 dual-core CPU (1.3 GHz, 6.5 W TDP) is under the heat sink.  Also note there are no fans in the enclosure.
+Below is a partial disassembly view of the Amazon AWS DeepLens.  In terms of SWaP, the DeepLens represents the current state-of-the-art lower boundary for x86 CPU based deep learning IoT and Edge products.  Note the small form-factor motherboard, incorporating fine-pitch connector and small-package technology similar to cell phones (such as 0201 and 1005 discrete components).  An Atom x5-E3930 dual-core CPU (1.3 GHz, 6.5 W TDP) is under the heat sink (there are no fans in the enclosure).
+
+Also note the use of a USB camera interface.  For applications requiring multiple cameras, or a multichannel combination of vision and audio I/O, adding more USB ports is straightforward when running Linux on an x86 CPU.
 
 ![AWS DeepLens with Atom x5-E3930 dual-core CPU on small form-factor motherboard](https://raw.githubusercontent.com/signalogic/SigDL/master/images/DeepLens_disassembly1.jpg "partial disassembly view of Amazon AWS DeepLens motherboard.  An Atom x5-E3930 dual-core CPU is under the heat sink")
 
