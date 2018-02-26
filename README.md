@@ -116,7 +116,7 @@ Below the "ocean FFT" and "random fog" CUDA demos are running.  For deep learnin
 <a name="IntelAtom"></a>
 ## Intel Atom
 
-The deep learning embedded targets below use Atom x5-E39xx family CPUs, but vary in SWaP<sup> 1</sup>.
+The deep learning embedded targets below use Atom x5-E39xx family CPUs, but vary in SWaP<sup> 1</sup>, making them suitable for IoT and Edge products with power consumption ranging of 7 to 15 W.  Using an x86 compatible CPU offers advantages in (i) compatibility with a wide variety of software, (ii) fast development time, and (iii) support for a huge range of I/O and storage peripherals.
 
 <a name="DeepLens_Atom"></a>
 ### Amazon DeepLens
