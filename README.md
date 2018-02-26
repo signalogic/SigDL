@@ -116,12 +116,12 @@ Below the "ocean FFT" and "random fog" CUDA demos are running.  For deep learnin
 <a name="IntelAtom"></a>
 ## Intel Atom
 
-The embedded targets below use Atom x5-E39xx family CPUs, but vary in SWaP<sup> 1</sup>.
+The deep learning embedded targets below use Atom x5-E39xx family CPUs, but vary in SWaP<sup> 1</sup>.
 
 <a name="DeepLens_Atom"></a>
 ### Amazon DeepLens
 
-Below is a partial disassembly view of the Amazon AWS DeepLens.  Note the small form-factor motherboard, incorporating fine-pitch connector and small-package technology similar to cell phones (such as 0201 and 1005 discrete components).  An Atom x5-E3930 dual-core CPU (1.3 GHz, 6.5 W TDP) is under the heat sink.  Note there are no fans in the enclosure.
+Below is a partial disassembly view of the Amazon AWS DeepLens.  In terms of SWaP, the DeepLens represents the current state-of-the-art lower boundary for x86 CPU based deep learning IoT and Edge products.  Note the small form-factor motherboard, incorporating fine-pitch connector and small-package technology similar to cell phones (such as 0201 and 1005 discrete components).  An Atom x5-E3930 dual-core CPU (1.3 GHz, 6.5 W TDP) is under the heat sink.  Also note there are no fans in the enclosure.
 
 ![AWS DeepLens with Atom x5-E3930 dual-core CPU on small form-factor motherboard](https://raw.githubusercontent.com/signalogic/SigDL/master/images/DeepLens_disassembly1.jpg "partial disassembly view of Amazon AWS DeepLens motherboard.  An Atom x5-E3930 dual-core CPU is under the heat sink")
 
@@ -131,7 +131,7 @@ Below is a top (component) side view of the DeepLens motherboard:
 
 ![AWS DeepLens with Atom x5-E3930 dual-core CPU on small form-factor motherboard (component side view)](https://raw.githubusercontent.com/signalogic/SigDL/master/images/DeepLens_motherboard_component_side_with_labels.jpg "component side view of Amazon AWS DeepLens motherboard with Atom x5-E3930 CPU")
 
-In a CPU based deep learning IoT product design, minimizing memory power consumption is crucial.  The DeepLens uses LPDDR4 DRAM, often referred to as "mobile DRAM"; i.e. cell phone memory technology.  The DeepLens has 8 GB of DRAM memory, implemented as four (4) Samsung 16 Gb x16 external devices (64-bit wide interface, 3733 Mbps transfer rate, clock rate 233 MHz).  Non-volatile storage is provided by an SK Hynix 16 GB NAND Flash chip.
+In any based deep learning IoT product design minimizing memory power consumption is crucial, but it's especially important for x86 CPU based designs, which require sizable external memory capacity in order to run Linux.  The DeepLens uses LPDDR4 DRAM, often referred to as "mobile DRAM"; i.e. cell phone memory technology.  The DeepLens has 8 GB of DRAM memory, implemented as four (4) Samsung 16 Gb x16 external devices (64-bit wide interface, 3733 Mbps transfer rate, clock rate 233 MHz).  Non-volatile storage is provided by an SK Hynix 16 GB NAND Flash chip.
 
 &nbsp;<br/>
 
