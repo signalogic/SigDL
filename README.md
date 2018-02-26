@@ -25,7 +25,7 @@ Functionality includes:
 &nbsp;&nbsp;&nbsp;&nbsp;[Model Acceleration Flow Diagram](#AccelerationFlowDiagram)<br/>
 [Deep Learning Embedded Targets](#SupportedEmbeddedTargets)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Nvidia Jetson TX2](#NvidiaJetsonTX2)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Atom (Intel) x5-E3940](#IntelX5E3940)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Intel Atom](#IntelAtom)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Amazon DeepLens](#DeepLens_Atom)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Commercial mini-ITX](#miniITX_Atom)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Movidius (Intel) MA2450 Neural Net Chip](#MovidiusMA2450)<br/>
@@ -113,40 +113,40 @@ Below the "ocean FFT" and "random fog" CUDA demos are running.  For deep learnin
 
 &nbsp;<br/>
 
-<a name="IntelX5E3940"></a>
-## Atom x5-E3940
+<a name="IntelAtom"></a>
+## Intel Atom
 
 The embedded targets below use Atom x5-E39xx family CPUs, but vary in SWaP<sup> 1</sup>.
 
 <a name="DeepLens_Atom"></a>
 ### Amazon DeepLens
 
-Below is a partial disassembly view of Amazon's AWS DeepLens.  Note the small form-factor motherboard, incorporating fine-pitch connector and small-package technology similar to cell phones (such as 0201 and 1005 discrete components).  An Atom x5-E3940 quad-core CPU is under the heat sink.
+Below is a partial disassembly view of Amazon's AWS DeepLens.  Note the small form-factor motherboard, incorporating fine-pitch connector and small-package technology similar to cell phones (such as 0201 and 1005 discrete components).  An Atom x5-E3930 dual-core CPU (1.3 GHz, 6.5 W TDP) is under the heat sink.  Note there are no fans in the enclosure.
 
-![AWS DeepLens with Atom x5-E3940 quad-core CPU on small form-factor motherboard](https://raw.githubusercontent.com/signalogic/SigDL/master/images/DeepLens_disassembly1.jpg "partial disassembly view of AWS DeepLens motherboard.  The Atom x5-E3940 quad-core CPU is under the heat sink")
+![AWS DeepLens with Atom x5-E3930 dual-core CPU on small form-factor motherboard](https://raw.githubusercontent.com/signalogic/SigDL/master/images/DeepLens_disassembly1.jpg "partial disassembly view of AWS DeepLens motherboard.  An Atom x5-E3930 dual-core CPU is under the heat sink")
 
 &nbsp;<br/>
 
 Below is a top (component) side view of the AWS DeepLens motherboard:
 
-![AWS DeepLens with Atom x5-E3940 quad-core CPU on small form-factor motherboard (component side view)](https://raw.githubusercontent.com/signalogic/SigDL/master/images/DeepLens_motherboard_component_side_with_labels.jpg "component side view of AWS DeepLens motherboard with Atom x5-E3940")
+![AWS DeepLens with Atom x5-E3930 dual-core CPU on small form-factor motherboard (component side view)](https://raw.githubusercontent.com/signalogic/SigDL/master/images/DeepLens_motherboard_component_side_with_labels.jpg "component side view of AWS DeepLens motherboard with Atom x5-E3930 CPU")
 
-To reduce power consumption, Samsung LPDDR4 DRAM is used, providing 8 GB of 64-bit memory at a 3733 Mbps transfer rate (clock rate 233 MHz, 4x 16 Gb chips organized as x16).  Non-volatile storage is provided by an SK Hynix 16 GB NAND Flash.
+To help reduce power consumption, the Samsung LPDDR4 DRAM is used, providing 8 GB of 64-bit memory at a 3733 Mbps transfer rate (clock rate 233 MHz, 4x 16 Gb chips organized as x16).  Non-volatile storage is provided by an SK Hynix 16 GB NAND Flash.
 
 &nbsp;<br/>
 
 Below is a bottom (solder) side view of the AWS DeepLens motherboard:
 
-![AWS DeepLens with Atom x5-E3940 quad-core CPU on small form-factor motherboard (solder side view)](https://raw.githubusercontent.com/signalogic/SigDL/master/images/DeepLens_motherboard_solder_side.jpg "solder side view of AWS DeepLens motherboard with Atom x5-E3940")
+![AWS DeepLens with Atom x5-E3930 dual-core CPU on small form-factor motherboard (solder side view)](https://raw.githubusercontent.com/signalogic/SigDL/master/images/DeepLens_motherboard_solder_side.jpg "solder side view of AWS DeepLens motherboard with Atom x5-E3930 CPU")
 
 &nbsp;<br/>
 
 <a name="miniITX_Atom"></a>
 ### Commercial mini-ITX
 
-Here is a commercially available mini-ITX form-factor board, also with an Atom x5-E3940 quad-core CPU similar to the DeepLens<sup> 2</sup>
+Here is a commercially available mini-ITX form-factor board<sup> 2</sup>, with an Atom x5-E3940 quad-core CPU.  Compared to the DeepLens CPU, the x5-E3940 has 2 additional cores, runs at 1.6 GHz and has a higher power rating (9.5 W vs. 6.5 W TDP).
 
-![x5-E3940 quad-core Atom CPU mini-ITX board](https://raw.githubusercontent.com/signalogic/SigDL/master/images/E3940_miniITX_conga-IA5_web.png "x5-E3940 quad core Atom CPU mini-ITX board")
+![x5-E3940 quad-core Atom CPU mini-ITX board](https://raw.githubusercontent.com/signalogic/SigDL/master/images/E3940_miniITX_conga-IA5_web.png "x5-E3940 quad-core Atom CPU mini-ITX board")
 
 <sup>1 </sup>SWaP = size, weight, and power consumption.<br/>
 <sup>2 </sup>The commercial mini-ITX image is a web pic, we don't have one in our lab yet.
