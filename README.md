@@ -11,7 +11,7 @@ The SigDL SDK provides binary libraries, example C/C++ and Python source code, a
 
 Functionality includes:
 
- - Support for deep learning models AlexNet, VGG-16, LeNet-5 and LeNet-300, and MobileNets
+ - Support for deep learning models AlexNet, VGG-16, LeNet-5 and LeNet-300, and compressed models MobileNet and SqueezeNet
  
  - Process flow loop for cloud training and testing, compression, and embedded target training and testing
  
