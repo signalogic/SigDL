@@ -45,9 +45,11 @@ Below is a flow diagram showing the multi-iterative, multi-testpoint nature of m
 
 &nbsp;<br/>
 
-<!---  old way, image not discoverable by Google
+<!--- standard image link and storage method recommended by Github, image not discoverable by Google
 ![Deep learning model compression flow diagram](https://github.com/signalogic/SigDL/blob/master/images/Deep_Learning_Model_Compression_Flow_Diagram_RevA4.png "Deep learning model compression flow diagram")
 --->
+
+<!--- direct link to image storage on githubusercontent.com, image is discoverable -->
 
 ![Deep learning model compression flow diagram](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Deep_Learning_Model_Compression_Flow_Diagram_RevA4.png "Deep learning model compression flow diagram")
 
@@ -69,7 +71,7 @@ Notes about the above flow diagram:
 <a name="AccelerationFlowDiagram"></a>
 ## Model Acceleration Flow Diagram
 
-In the following description, "acceleration" refers to fast-as-possible training performance in the cloud, using whatever cloud resources are available or can be procurred.  Some deep learning researchers refer to acceleration to mean inference performance improvement; for embedded targets, this is an incorrect usage as the question is simply whether the embedded target / product is running inference in real-time or not.  I.e. for video or image based applications, does performance meet the fps (frames per sec) product requirement ?  The answer is a function of model compression and the resulting inference run-time, not training.
+In the following description, "acceleration" means as-fast-as-possible training performance in the cloud, using whatever cloud resources are available or can be procurred.  Some deep learning researchers refer to acceleration to mean inference performance improvement; for embedded targets, this is an incorrect usage as the question is simply whether the embedded target / product is running inference in real-time, and what level of optimization is required to achieve that.  For example, for video or image based applications, does performance meet the fps (frames per sec) product requirement ?  The answer is a function of model compression and other optimizations applied to the inference run-time.  To summarize, in the software and hardware descriptions on this page, "optimization" means achieving real-time inference (in the product), and "acceleration" means reducing time required for training (in the cloud).
 
 Below is a flow diagram showing deep learning model acceleration.  Like model compression above, the process is multi-iterative with multiple test points.  In this case, the focus is on accelerating model training, for example reducing training time to a day or several hours, or possibly less.  When combined with model compression, the primary objective is to map continuous integration and continuous deployment (CICD) onto available server resources (i.e. public cloud and/or private servers) and embedded targets (i.e. IoT and Edge products).
 
@@ -135,7 +137,7 @@ Below is a top (component) side view of the DeepLens motherboard:
 
 In any deep learning IoT product design, minimizing memory power consumption is crucial, but it's especially important for x86 CPU based designs, which require sizable external memory capacity in order to gain maximum advantage from running Linux and open source software (much of which was developed and runs in the cloud).  The DeepLens uses LPDDR4 DRAM, often referred to as "mobile DRAM" (i.e. cell phone memory technology).  The DeepLens has 8 GB of DRAM memory, implemented as four (4) Samsung 16 Gb x16 external devices (64-bit wide interface, maximum of 3733 Mbps transfer rate from a 233 MHz clock).  Non-volatile storage is provided by an SK Hynix 16 GB NAND Flash chip.
 
-Although the fanless DeepLens enclosure provides a great example of what's currently possible with x86 CPUs inside IoT and Edge products, Intel still has a ways to go to improve the situation.  The x5 CPU family generates enough heat that external LPDDR4 must be placed a considerable distance from the CPU (due to the mechanical size of the heat sink), which impacts both memory performance and overall size of the motherboard.  A desirable objective for future x86 CPU chip designs would be to use PoP (package on package) technology to allow memory devices to "stack" directly on top of the CPU.  However, this will take another 2x or more reduction in CPU power consumption.
+Although the fanless DeepLens enclosure provides a great example of what's currently possible with x86 CPUs inside IoT and Edge products, Intel still has a ways to go to improve the situation.  The x5 CPU family generates enough heat that external LPDDR4 devices must be placed a considerable distance from the CPU (due to the mechanical size of the heat sink), which impacts both memory performance and overall size of the motherboard.  A desirable objective for future x86 CPU chip designs would be to use PoP (package on package) technology to allow memory devices to "stack" directly on top of the CPU.  However, this will take another 2x or more reduction in CPU power consumption.
 
 &nbsp;<br/>
 
