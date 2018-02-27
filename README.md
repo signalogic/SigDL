@@ -162,13 +162,15 @@ Here is a commercially available mini-ITX form-factor board<sup> 2</sup>, with a
 <a name="MovidiusMA2450"></a>
 ## Movidius MA2450 Neural Net Chip
 
-The Movidius neural net devices are essentially ASICs for use in Edge and IoT products that optimize deep learning model compression in order to minimize SWaP.  Without the need to run Linux and other general software, power consumption can be reduced to under 1 W.  Of course the tradeoff is that only one compressed model (in this case MobileNet) is supported, and flexibility in changing model parameters, such as input image resolution and convolutional layer resolution, is limited.
+The Movidius neural net devices are essentially ASICs for use in Edge and IoT products that optimize deep learning model compression in order to minimize SWaP.  Without the need to run Linux and other general software, power consumption can be reduced to under 1 W.  Of course the tradeoff is that only one compressed model (in this case MobileNet) is supported, and flexibility in model parameters, such as input image resolution and convolutional layer resolution, is limited.
 
 Below are some lab pics showing internal assembly and cabling of the AIY vision kit, which incorporates a Movidius MA2450 device (aka Myriad 2).  The assembly is formed by attaching a daughtermodule with the Movidius device and a v2 camera module to a Raspberry Pi Zero W.  The Zero W is required as it has a fine pitch FPC (Flexible Printed Circuit) connector for the camera.
 
-The image below shows the Raspberry Pi Zero W module by itself, without the Movidius daughtermodule attached.  The 40-pin header is used by the Raspberry Pi community for expansion purposes, usually in the form of attaching a wide variety of daughtermodules.  Note the camera connector at left, and also the ACT (activity LED) near the micro USB power connector, which is used to indicate boot activity.
+The image below shows the Raspberry Pi Zero W module by itself, without the Movidius daughtermodule attached.  The 40-pin header is used by the Raspberry Pi community for expansion purposes by attaching a wide variety of daughtermodules.  Note the camera connector at left, and also the ACT (activity LED) near the micro USB power connector, which is used to indicate boot activity.
 
 ![Raspberry Pi Zero W module without daughtermodule and camera connected](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Raspberry_pi_w_zero_basic_config_w_labels.jpeg "Raspberry Pi Zero W module without daughtermodule and camera connected")
+
+You might ask, where is the memory ?  How can the PCB be so small ?  The answer is the Raspberry Pi is a highly advanced, state-of-the-art example of embedded system engineering.  Most impressive is the small size of the PCB, which eliminates all FBGA packages except a Broadcom ARM SoC, and uses PoP technology (package on package) to stack memory directly on top of the SoC.
 
 &nbsp;<br/>
 
@@ -190,8 +192,13 @@ The next set of images show the Raspberry Pi Zero W module with the Movidius vis
 
 &nbsp;<br/>
 
-The image below shows dmesg display, grepped for "googlevision", after booting with the Movidius vision module and camera attached.  Note the vision module ASIC chip is called "Myriad".  "Bonnet" is a typical Googly word for daughtermodule.  When solving embedded target debug and development problems, it can be helpful to keep in mind that embedded system fundamentals such as small form-factors, reduced power consumption and heat, expansion options, JTAG debug interface, and other key areas haven't changed since the 
-1990s, even if Google would like to apply new terminology.
+The image below shows dmesg display, grepped for "googlevision", after booting with the Movidius vision module and camera attached.  A couple of notes about AIY nomenclature:
+
+  -as noted above, Movidius ASIC chip is also known as "Myriad"
+  
+  -"Bonnet" is a typical Googly word for daughtermodule
+  
+Terms like AIY and Bonnet are friendly, but make no mistake:  when solving embedded target debug and development problems, it's important to keep in mind that embedded system fundamentals such as small form-factors, reduced power consumption and heat, expansion options, JTAG debug interface, and other key areas haven't changed since the 1990s.  Embedded system development and debug has a long history of established methods and techniques, even if Raspberry Pi and Google developers would like to apply new terminology.
 
 ![dmesg display after booting Raspberry Pi Zero W module with Movidius MA2450 module and v2 camera attached](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Raspberry_pi_w_zero_Myriad_vision_module_boot.jpeg "dmesg display after booting Raspberry Pi Zero W module with Movidius MA2450 module and v2 camera attached")
 
