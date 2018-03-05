@@ -13,7 +13,7 @@ Functionality includes:
 
  - Support for deep learning models AlexNet, VGG-16, LeNet-5 and LeNet-300, and compressed models MobileNet and SqueezeNet
  
- - Process flow loop for cloud training and testing, compression, and embedded target training and testing
+ - CICD continuous / iterative flow loop for cloud training and testing, compression, and embedded target training and testing, new data acquisition by the target
  
  - Support for embedded targets Nvidia Jetson TX2 (Parker SoC, Pascal GPU), Atom x5-E3930 and x5-E3940, and Movidius MA2450
 
