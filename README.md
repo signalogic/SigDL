@@ -165,7 +165,7 @@ Below is an image of a commercially available mini-ITX form-factor board<sup> 2<
 ![x5-E3940 quad-core Atom CPU mini-ITX board](https://raw.githubusercontent.com/signalogic/SigDL/master/images/E3940_miniITX_conga-IA5_web.png "x5-E3940 quad-core Atom CPU mini-ITX board")
 
 <sup>1 </sup>SWaP = size, weight, and power consumption.<br/>
-<sup>2 </sup>The commercial mini-ITX image is a web pic, we don't have one in our lab yet.
+<sup>2 </sup>The commercial pico-ITX and mini-ITX board images are web pics of Congatech PA5 and IA5 products; we don't have these in our lab yet.
 
 &nbsp;<br/>
 
