@@ -208,7 +208,7 @@ The image below shows dmesg display, grepped for "googlevision", after booting w
   
   -"Bonnet" is a typical Googly word for daughtermodule
   
-Terms like AIY and Bonnet are friendly, but make no mistake:  when solving embedded target debug and development problems, it's important to keep in mind that embedded system fundamentals such as small form-factors, reduced power consumption and heat, expansion options, JTAG debug interface, and other key areas haven't changed since the 1990s.  Embedded system development and debug has a long history of established methods and techniques, even if Raspberry Pi and Google developers would like to apply marketing terminology.
+Terms like AIY and Bonnet are friendly, and the Raspberry Pi does run Linux, but make no mistake:  solving debug and development problems at this level is not easy.  Gritty methods such as JTAG emulator and lab equipment, including digital scope and logic analyzer, may be needed.  Fortunately, embedded system development and debug has a long history of established methods and techniques, stretching back to PC104 technology in the 1990s.
 
 ![dmesg display after booting Raspberry Pi Zero W module with Movidius MA2450 module and v2 camera attached](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Raspberry_pi_w_zero_Myriad_vision_module_boot.jpeg "dmesg display after booting Raspberry Pi Zero W module with Movidius MA2450 module and v2 camera attached")
 
