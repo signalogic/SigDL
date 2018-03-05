@@ -123,7 +123,7 @@ The deep learning embedded targets below use Atom x5-E39xx family CPUs, but vary
 <a name="DeepLens_Atom"></a>
 ### Amazon DeepLens
 
-In terms of SWaP, Amazon AWS's DeepLens represents the current state-of-the-art lower boundary for x86 CPU based deep learning IoT and Edge products.  In a way, Amazon has created the "smallest possible x86 server"; the images below provide some insight into the challenges they faced.  The first image is a partial disassembly view.  Note the small form-factor motherboard, incorporating mobile phone PCB technology (such as ultra fine-pitch connectors and FBGA packages, blind and buried vias and microvias, and extensive use of 0201 and 1005 discrete component package sizes).  An Atom x5-E3930 dual-core CPU (1.3 GHz, 6.5 W TDP) is under the heat sink (there are no fans in the enclosure).
+In terms of SWaP, Amazon AWS's DeepLens represents the current state-of-the-art lower boundary for x86 CPU based deep learning IoT and Edge products.  In a way, Amazon is competing for the "smallest possible x86 server"; the images below provide some insight into the challenges they faced.  The first image is a partial disassembly view.  Note the small form-factor motherboard, incorporating mobile phone PCB technology (such as ultra fine-pitch connectors and FBGA packages, blind and buried vias and microvias, and extensive use of 0201 and 1005 discrete component package sizes).  An Atom x5-E3930 dual-core CPU (1.3 GHz, 6.5 W TDP) is under the heat sink (there are no fans in the enclosure).
 
 Also note the use of a USB camera interface.  For applications requiring multiple cameras, or a multichannel combination of vision and audio I/O, adding more USB ports is straightforward when running Linux on an x86 CPU.
 
@@ -137,7 +137,7 @@ Below is a top (component) side view of the DeepLens motherboard:
 
 In any deep learning IoT product design, minimizing memory power consumption is crucial, but it's especially important for x86 CPU based designs, which require sizable external memory capacity in order to gain maximum advantage from running Linux and open source software (much of which is developed and runs in the cloud).  The DeepLens uses LPDDR4 DRAM, often referred to as "mobile DRAM" (i.e. cell phone memory technology).  The DeepLens has 8 GB of DRAM memory, implemented as four (4) Samsung 16 Gb x16 external devices (64-bit wide interface, maximum of 3733 Mbps transfer rate from a 233 MHz clock).  Non-volatile storage is provided by an SK Hynix 16 GB NAND Flash chip.
 
-Although the fanless DeepLens enclosure provides a great example of what's currently possible with x86 CPUs inside IoT and Edge products, Intel still has a ways to go to improve the situation.  The x5 CPU family generates enough heat that external LPDDR4 devices must be placed a considerable distance from the CPU (due to the mechanical size of the heat sink), which impacts both memory performance and overall size of the motherboard.  A desirable objective for future x86 CPU chip designs would be to use PoP (package on package) technology to allow memory devices to "stack" directly on top of the CPU.  However, this will take another 2x or more reduction in CPU power consumption.
+Although the fanless DeepLens enclosure provides a great example of what's currently possible with x86 CPUs inside IoT and Edge products, Intel still has a ways to go to improve the situation.  The x5 CPU family generates enough heat that external LPDDR4 devices must be placed a considerable distance from the CPU (due to the mechanical size of the heat sink), which impacts both memory performance and overall size of the motherboard.  A desirable objective for future x86 CPU chip designs would be to use PoP (package on package) technology to allow memory devices to "stack" directly on top of the CPU.  However, this will take another major reduction in CPU power consumption.
 
 &nbsp;<br/>
 
@@ -150,7 +150,7 @@ Below is a bottom (solder) side view of the DeepLens motherboard:
 <a name="picoITX_miniITX_Atom"></a>
 ### Commercial pico-ITX and mini-ITX
 
-Below is an image of a commercially available pico-ITX form-factor board<sup> 2</sup>, with an Atom x5-E3930 dual-core CPU (same as the DeepLens).  Note the pico-ITX PCB dimensions (100 x 70 mm per pico-ITX standard) are slightly smaller than the DeepLens PCB (100 x 87 mm).
+Below is an image of a commercially available pico-ITX form-factor board<sup> 2</sup>, with an Atom x5-E3930 dual-core CPU (same as the DeepLens).  Note the PCB dimensions (100 x 70 mm per pico-ITX standard) are slightly smaller than the DeepLens PCB (100 x 87 mm).
 
 ![x5-E3930 dual-core Atom CPU pico-ITX board, CPU side view](https://raw.githubusercontent.com/signalogic/SigDL/master/images/E3930_picoITX_conga-PA5_web_CPU_side.png "x5-E3930 dual-core Atom CPU pico-ITX board, CPU side view")
 
