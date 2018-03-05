@@ -7,7 +7,7 @@ The SigDL SDK provides binary libraries, example C/C++ and Python source code, a
 
 1. Deep learning model compression for real-time IoT and Edge embedded systems
 
-2. Deep learning model acceleration of training and testing in servers
+2. Deep learning model acceleration of training and testing in cloud and private servers
 
 Functionality includes:
 
