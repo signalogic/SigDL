@@ -154,6 +154,8 @@ Below is an image of a commercially available pico-ITX form-factor board<sup> 2<
 
 ![x5-E3930 dual-core Atom CPU pico-ITX board, CPU side view](https://raw.githubusercontent.com/signalogic/SigDL/master/images/E3930_picoITX_conga-PA5_web_CPU_side.png "x5-E3930 dual-core Atom CPU pico-ITX board, CPU side view")
 
+Although the Atom CPU is visible in the above image, it needs a heat sink for normal operation. Below is an image of the pico-ITX motherboard component side, including all connectors:
+
 ![x5-E3930 dual-core Atom CPU pico-ITX board, component side view](https://raw.githubusercontent.com/signalogic/SigDL/master/images/E3930_picoITX_conga-PA5_web_component_side.png "x5-E3930 dual-core Atom CPU pico-ITX board, component side view")
 
 &nbsp;<br/>
