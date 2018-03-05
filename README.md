@@ -27,7 +27,7 @@ Functionality includes:
 &nbsp;&nbsp;&nbsp;&nbsp;[Nvidia Jetson TX2](#NvidiaJetsonTX2)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Intel Atom](#IntelAtom)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Amazon DeepLens](#DeepLens_Atom)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Commercial mini-ITX](#miniITX_Atom)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Commercial pico-ITX and mini-ITX](#picoITX_miniITX_Atom)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Movidius (Intel) MA2450 Neural Net Chip](#MovidiusMA2450)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Texas Instruments c66x (pending, see notes)](#TexasInstrumentsC66x)<br/>
 
@@ -147,10 +147,18 @@ Below is a bottom (solder) side view of the DeepLens motherboard:
 
 &nbsp;<br/>
 
-<a name="miniITX_Atom"></a>
-### Commercial mini-ITX
+<a name="picoITX_miniITX_Atom"></a>
+### Commercial pico-ITX and mini-ITX
 
-Here is a commercially available mini-ITX form-factor board<sup> 2</sup>, with an Atom x5-E3940 quad-core CPU.  Compared to the DeepLens CPU, the x5-E3940 has 2 additional cores, runs at 1.6 GHz and has a higher power rating (9.5 W vs. 6.5 W TDP).
+Below is an image of a commercially available pico-ITX form-factor board<sup> 2</sup>, with an Atom x5-E3930 dual-core CPU (same as the DeepLens).  Note the pico-ITX PCB dimensions (100 x 70 mm per pico-ITX standard) are slightly smaller than the DeepLens PCB (100 x 87 mm).
+
+![x5-E3930 dual-core Atom CPU pico-ITX board, CPU side view](https://raw.githubusercontent.com/signalogic/SigDL/master/images/E3930_picoITX_conga-PA5_web_CPU_side.png "x5-E3930 dual-core Atom CPU pico-ITX board, CPU side view")
+
+![x5-E3930 dual-core Atom CPU pico-ITX board, component side view](https://raw.githubusercontent.com/signalogic/SigDL/master/images/E3930_picoITX_conga-PA5_web_component_side.png "x5-E3930 dual-core Atom CPU pico-ITX board, component side view")
+
+&nbsp;<br/>
+
+Below is an image of a commercially available mini-ITX form-factor board<sup> 2</sup>, with an Atom x5-E3940 quad-core CPU.  Compared to the DeepLens CPU, the x5-E3940 has 2 additional cores, runs at 1.6 GHz and has a higher power rating (9.5 W vs. 6.5 W TDP).
 
 ![x5-E3940 quad-core Atom CPU mini-ITX board](https://raw.githubusercontent.com/signalogic/SigDL/master/images/E3940_miniITX_conga-IA5_web.png "x5-E3940 quad-core Atom CPU mini-ITX board")
 
