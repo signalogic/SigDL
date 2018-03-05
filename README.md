@@ -30,6 +30,7 @@ Functionality includes:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Commercial pico-ITX and mini-ITX](#picoITX_miniITX_Atom)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Movidius (Intel) MA2450 Neural Net Chip](#MovidiusMA2450)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Texas Instruments c66x (pending, see notes)](#TexasInstrumentsC66x)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Customized Deep Learning Embedded Targets](#CustomizedTargets)<br/>
 
 <a name="DeepLearningModelCompression"></a>
 # Deep Learning Model Compression
@@ -240,3 +241,10 @@ In the mini-ITX images, the motherboard is a dual core Atom (C2358 @ 1.74 GHz) w
 As an interesting side note, besides x86 it's also possible to combine a half-size c66x PCIe card Tegra GPU SoCs, for example the Jetson TX2 board has an x4 PCIe slot (see Jetson pics above).  What could be done with a next-gen Tegra (say 128 CUDA cores and 128 Tensor cores) and 32 c66x cores ?
 
 If you are using or considering to use TI c66x and wish to discuss this either with Signalogic or 3-way with TI Sr. Management, please contact Signalogic.
+
+&nbsp;<br/>
+
+<a name="CustomizedTargets"></a>
+## Customized Deep Learning Embedded Targets
+
+For information about customizing the above deep learning embedded targets, or developing something different based on combinations of the above targets or a new target, send e-mail to info at signalogic dot com.
