@@ -206,9 +206,9 @@ The image below shows dmesg display, grepped for "googlevision", after booting w
 
   -as noted above, the Movidius ASIC chip is also known as "Myriad"
   
-  -"Bonnet" is a typical Googly word for daughtermodule
+  -"Bonnet" is a Googly word for daughtermodule
   
-Terms like AIY and Bonnet sound friendly, and the Raspberry Pi does run Linux, but make no mistake:  solving debug and development problems at this level is not easy.  Gritty methods such as hand-soldering under a microscope and lab equipment such as JTAG emulator, digital scope, and logic analyzer, may be needed.  Fortunately, embedded system development and debug has a long history of established methods and techniques, stretching back to PC104 technology in the 1990s.
+Terms like AIY and Bonnet sound friendly, and the Raspberry Pi does run Linux, but make no mistake:  solving debug and development problems at this level of miniaturization is not easy.  Gritty methods such as hand-soldering under a microscope and lab equipment such as JTAG emulator, digital scope, and logic analyzer, may be needed.  Fortunately, embedded system development and debug has a long history of established methods and techniques, stretching back to PC104 technology in the 1990s.
 
 ![dmesg display after booting Raspberry Pi Zero W module with Movidius MA2450 module and v2 camera attached](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Raspberry_pi_w_zero_Myriad_vision_module_boot.jpeg "dmesg display after booting Raspberry Pi Zero W module with Movidius MA2450 module and v2 camera attached")
 
