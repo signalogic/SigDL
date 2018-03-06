@@ -78,7 +78,7 @@ Below is a flow diagram showing deep learning model acceleration.  Like model co
 
 &nbsp;<br/>
 
-![Deep learning model acceleration flow diagram](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Deep_Learning_Model_Acceleration_Flow_Diagram_RevA2.png "Deep learning model acceleration flow diagram")
+![Deep learning model acceleration flow diagram](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Deep_Learning_Model_Acceleration_Flow_Diagram_RevA3.png "Deep learning model acceleration flow diagram")
 
 &nbsp;<br/>
 
@@ -88,14 +88,14 @@ Notes about the above flow diagram:
 
 2) The initial Training block assumes use of GPU boards of some type.
 
-3) The "Re-Training" block depends on "device accurate" emulation of the embedded target.  It can also be accelerated; however its situation with respect to training results, especially accuracy and performance measurement, is completely different than the "Training" block (see above model compression notes).
+3) The "Re-Training" block depends on "device accurate" emulation of the embedded target.  It can also be accelerated, although it may depend on the emulation method; for example, the number of concurrent processes supported by the target device PCIe card (if one is being used).  Re-Training results must be evaluated for accuracy and performance measurement.  It may also be possible to make an approximate estimate of power consumption, although reliable "real world" values can only be obtained by running inference on the target.  See compression flow diagram note 2) above for discussion of target emulation.
 
-4) Testing can potentially be parallelized also, for example in cases where multiple compression models are concurrently being evaluated.
+4) Testing can potentially be parallelized also, for example in cases where multiple compression models are concurrently being evaluated, or to simply make it faster.  In either case the data set can be divided into groups, and results aggregated upon completion.
 
 <a name="SupportedEmbeddedTargets"></a>
 # Deep Learning Embedded Targets
 
-Work is ongoing to support the following embedded targets with SigDL software.  The following sections take a closer look at available deep learning product platforms and form-factors that range in power consumption from 2 to 30 W.
+Work is ongoing to support the following embedded targets with SigDL software.  The following sections take a closer look at available deep learning product platforms and form-factors that range in power consumption from 1 to 30 W.
 
 <a name="NvidiaJetsonTX2"></a>
 ## Nvidia Jetson TX2
