@@ -94,7 +94,7 @@ Notes about the above flow diagram:
 
 4) Re-Testing results must be evaluated for accuracy and performance.  It may also be possible to make an approximate estimate of target power consumption, although reliable "real world" values can only be obtained by running real-time inference on the target.
 
-5) Testing blocks can potentially be parallelized, for example in cases where multiple compression models are concurrently being evaluated, or to simply make it faster.  In either case the data set can be divided into groups, and results aggregated upon completion.
+5) Testing blocks can potentially be parallelized, for example in cases where multiple compression models are concurrently being evaluated, or to simply make them faster.  In either case the data set can be divided into groups, and results aggregated upon completion.
 
 <a name="SupportedEmbeddedTargets"></a>
 # Deep Learning Embedded Targets
