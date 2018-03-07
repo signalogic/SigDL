@@ -90,9 +90,9 @@ Notes about the above flow diagram:
 
 2) The initial Training block assumes use of GPU boards of some type.
 
-3) The "Re-Testing" block depends on device-accurate emulation of the embedded target.  It can also be accelerated, although it may depend on the emulation method; for example, the number of concurrent processes supported by the target device PCIe card (if one is being used).
+3) The "Re-Testing" block depends on device-accurate emulation of the embedded target.  It can also be accelerated, although it may depend on the emulation method; for example, the number of concurrent processes supported by the target device PCIe card (if one is being used).  See compression flow diagram note 2) above for a more in-depth discussion of target emulation.
 
-4) Re-Testing results must be evaluated for accuracy and performance.  It may also be possible to make an approximate estimate of target power consumption, although reliable "real world" values can only be obtained by running real-time inference on the target.  See compression flow diagram note 2) above for a more in-depth discussion of target emulation.
+4) Re-Testing results must be evaluated for accuracy and performance.  It may also be possible to make an approximate estimate of target power consumption, although reliable "real world" values can only be obtained by running real-time inference on the target.
 
 5) Testing can potentially be parallelized, for example in cases where multiple compression models are concurrently being evaluated, or to simply make it faster.  In either case the data set can be divided into groups, and results aggregated upon completion.
 
