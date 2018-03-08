@@ -76,7 +76,7 @@ In the following description, "acceleration" means as-fast-as-possible training 
 <a name="AccelerationFlowDiagram"></a>
 ## Model Acceleration Flow Diagram
 
-Below is a flow diagram showing deep learning model acceleration.  Like model compression above, the process is multi-iterative with multiple test points.  In this case, the focus is on accelerating model training, for example reducing training time to a day or several hours, or possibly less.  When combined with model compression, the primary objective is to map continuous integration and continuous deployment (CICD) onto available server resources (i.e. public cloud and/or private servers) and embedded targets (i.e. IoT and Edge products).
+Below is a flow diagram showing deep learning model acceleration.  Like model compression above, the process is multi-iterative with multiple test points.  In this case, the focus is on accelerating model training, for example reducing training time to a day or several hours, or possibly less.  When combined with model compression, the primary objectives are (i) map continuous integration and continuous deployment (CICD) onto available server resources (i.e. public cloud and/or private servers) and embedded targets (i.e. Edge and IoT products), and (ii) minimize CICD redeployment time, in order to increase reliability and robustness Edge and IoT products.
 
 &nbsp;<br/>
 
