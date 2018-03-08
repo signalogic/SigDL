@@ -177,15 +177,17 @@ Below is an image of a commercially available mini-ITX form-factor board<sup> 2<
 <a name="MovidiusMA2450"></a>
 ## Movidius MA2450 Neural Net Chip
 
-The Movidius neural net devices are essentially ASICs for use in Edge and IoT products that optimize deep learning model compression in order to minimize SWaP.  Without the need to run Linux and other general software, power consumption can be reduced to under 1 W.  Of course the tradeoff is that only one compressed model (in this case MobileNet) is supported, and flexibility in model parameters, such as input image resolution and convolutional layer resolution, is limited.
+The Movidius neural net devices are small, very low power ASICs intended for use in Edge and IoT products.  The example shown here is a Myriad 2 MA2450 chip that highly optimizes a compressed deep learning model in order to minimize the chip's SWaP.
 
-Below are some lab pics showing internal assembly and cabling of the AIY vision kit, which incorporates a Movidius MA2450 device (aka Myriad 2).  The assembly is formed by attaching a daughtermodule with the Movidius device and a v2 camera module to a Raspberry Pi Zero W.  The Zero W is required as it has a fine pitch FPC (Flexible Printed Circuit) connector for the camera.
+Using ASICs, a compressed deep learning model can run under 1 W.  Of course there are tradeoffs in this approach; namely the system still needs another device (say an ARM) to run Linux, other general software, and likely some amount of OpenCV image processing, which consumes a substantial amount of additional power.  Another less obvious tradeoff is that typically only one compressed model (in the case of the Movidius device, MobileNet) is supported, and flexibility in model parameters, such as input image resolution and convolutional layer resolution, is limited.
+
+Below are some lab pics showing internal assembly and cabling of the AIY vision kit, which incorporates the Movidius device.  The assembly is formed by attaching a daughtermodule containing the Movidius device and a v2 camera module to a Raspberry Pi Zero W.  The Zero W version of Raspberry Pi modules is required as it has a fine pitch FPC (Flexible Printed Circuit) connector for the camera.
 
 The image below shows the Raspberry Pi Zero W module by itself, without the Movidius daughtermodule attached.  The 40-pin header is used by the Raspberry Pi community for expansion purposes by attaching a wide variety of daughtermodules.  Note the camera connector at left, and also the ACT (activity LED) near the micro USB power connector, which is used to indicate boot activity.
 
 ![Raspberry Pi Zero W module without daughtermodule and camera connected](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Raspberry_pi_w_zero_basic_config_w_labels.jpeg "Raspberry Pi Zero W module without daughtermodule and camera connected")
 
-You might ask, where is the memory ?  How can the PCB be so small ?  The answer is the Raspberry Pi is a highly advanced, state-of-the-art example of embedded system engineering.  Most impressive is the small size of the PCB, which eliminates all FBGA packages except a Broadcom ARM SoC, and uses PoP technology (package on package) to stack memory directly on top of the SoC.
+Looking closely at the Raspberry Pi Zero W, you might ask where is the memory ?  How can the PCB be so small ?  The answer is the Raspberry Pi module series are highly advanced, state-of-the-art examples of embedded system engineering.  Most impressive with the Zero W is the small size of the PCB, which eliminates all FBGA packages except a Broadcom ARM SoC, and uses PoP technology (package on package) to stack memory directly on top of the SoC.
 
 &nbsp;<br/>
 
