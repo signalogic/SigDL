@@ -56,7 +56,7 @@ Below is a flow diagram showing the multi-iterative, multi-testpoint nature of m
 
 &nbsp;<br/>
 
-Notes about the above flow diagram:
+Notes about model compression CICD flow:
 
 1) All testing blocks include inference.  For inference testing performance may vary from non-real-time to accelerated many times faster than real-time, depending on available cloud resources.  An inference block is shown explicitly when real-time performance is required.
 
@@ -187,7 +187,7 @@ The image below shows the Raspberry Pi Zero W module by itself, without the Movi
 
 ![Raspberry Pi Zero W module without daughtermodule and camera connected](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Raspberry_pi_w_zero_basic_config_w_labels.jpeg "Raspberry Pi Zero W module without daughtermodule and camera connected")
 
-Looking closely at the Raspberry Pi Zero W, you might ask where is the memory ?  How can the PCB be so small ?  The answer is the Raspberry Pi module series are highly advanced, state-of-the-art examples of embedded system engineering.  Most impressive with the Zero W is the small size of the PCB, which eliminates all FBGA packages except a Broadcom ARM SoC, and uses PoP technology (package on package) to stack memory directly on top of the SoC.
+Looking closely at the Raspberry Pi Zero W, you might ask, where is the memory ?  How can the PCB be so small ?  The answer is the Raspberry Pi module series are highly advanced, state-of-the-art examples of embedded system engineering.  Most impressive is the small size of the Zero W PCB, which eliminates all FBGA packages except a Broadcom ARM SoC, and uses PoP technology (package on package) to stack memory directly on top of the SoC.
 
 &nbsp;<br/>
 
@@ -224,9 +224,9 @@ Terms like AIY and Bonnet sound friendly, and the Raspberry Pi does run Linux, b
 <a name="TexasInstrumentsC66x"></a>
 ## Texas Instruments c66x
 
-Deep learning model support for c66x multicore CPUs is pending cloud solution support from Texas Instruments. Fundamentally, c66x devices are able to perform energy-efficient, high performance deep learning, as demonstrated in this [deep learning embedded target comparison paper by Dr. Nachiket Kapre](http://nachiket.github.io/publications/caffepresso_cases2016.pdf) at the University of Waterloo.  Whether TI will embrace the need for a cloud based c66x deep learning solution to support c66x device-accurate model compression, re-training, and re-testing for embedded targets is a pending question.
+Fundamentally, TI devices containing c66x cores are able to perform energy-efficient, high performance deep learning, as demonstrated in this [deep learning embedded target comparison paper by Dr. Nachiket Kapre](http://nachiket.github.io/publications/caffepresso_cases2016.pdf) at the University of Waterloo.  It's unknown if TI will embrace the need for a cloud based deep learning solution that supports c66x device-accurate CICD flow, including model compression, re-training, and re-testing.  The current TIDL (TI Deep Learning) solution, which supports ADAS and other embedded devices containing c66x cores, uses software emulation (see "Notes about the model compression CICD flow", above).
 
-As a potential basis for a c66x device-accurate deep learning cloud solution, the architecture shown in the pictures and links below already works.  Currently this architecture supports OpenCV, C/C++, Python, c66x math and DSP libraries, 8-bit MAC operations (32-bit accumulation), and other essential deep learning components, but a substantial amount of additional work is needed to create a deep learning CICD reference solution.  At minimum, such a solution should incorporate TensorFlow, Caffe, and the deep learning and compression models mentioned in the Readme intro above.
+As a potential basis for a c66x device-accurate cloud solution, the architecture shown in the pictures and links already works for HPC applications and can be adapted.  Currently this architecture supports OpenCV, C/C++, Python, c66x math and DSP libraries, 8-bit MAC operations (32-bit accumulation), and other essential deep learning components, but a substantial amount of additional work is needed to create a deep learning CICD reference solution.  At minimum, such a solution should incorporate TensorFlow, Caffe, and the deep learning and compression models mentioned in the Readme intro above.
 
 The images below show multiple 64-core PCIe cards (up to 384 or more c66x cores depending on server form-factor, suitable for training on high resolution data sets), in standard 1U and 2U Dell and HP servers.
 
