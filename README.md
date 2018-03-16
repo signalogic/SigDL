@@ -15,7 +15,7 @@ SigDL is aimed at IoT device and edge computing targets ranging in power consump
  
  - CICD continuous / iterative flow loop for cloud training and testing, compression, and embedded target training and testing, new data acquisition by the target
  
- - Support for embedded targets Nvidia Jetson TX2 (Parker SoC, Pascal GPU), Atom x5-E3930 and x5-E3940, and Movidius MA2450
+ - Support for embedded targets Nvidia Jetson TX2 (Parker SoC, Pascal GPU), Atom x5-E3930 and x5-E3940, multicore ARM, and Movidius MA2450
 
 # Table of Contents
 
@@ -122,9 +122,11 @@ Work is ongoing to support the following embedded targets with SigDL software.  
 <a name="NvidiaJetsonTX2"></a>
 ## Nvidia Jetson TX2
 
-Below is an image showing the Jetson TX2 board set up in the lab, with key TX2 peripherals labeled.  Note the small camera daughtercard at right.
+The Jetson TX2 is a development board containing a Tegra family "Parker" SoC with 256 Cuda GPU cores.  Below is an image showing the Jetson TX2 board set up in the lab, with key TX2 peripherals labeled.  Note the small camera daughtercard at right.
 
 ![Nvidia TX2 Jetson board in the lab, with peripherals labeled](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Jetson_TX2_in_lab_with_labels2.jpg "Nvidia Jetson TX2 board in the lab, with peripherals labeled")
+
+If used as-is in an embedded product, the Jetson TX2 consumes from 7 to 15 W, which is at the high end of power consumption for IoT device applications, and low end for edge computing applications.  Custom IoT device applications incorporating the Parker SoC may reduce power consumption by carefully controlling clock rate and peripheral usage.  Note that the Parker SoC always requires a heat sink; depending on Cuda core usage, a fan may or may not be needed.
 
 &nbsp;<br/>
 
