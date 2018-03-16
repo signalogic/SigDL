@@ -1,4 +1,4 @@
-# SigDL -- Deep Learning for IoT and Edge Embedded Targets
+# SigDL -- Deep Learning for IoT Device and Edge Computing Embedded Targets
 
  ```html
 <! this page under construction
@@ -9,7 +9,7 @@ The SigDL SDK provides binary libraries, example C/C++ and Python source code, a
 
 2. Deep learning model acceleration of training and testing in cloud and private servers
 
-Functionality includes:
+The focus is on IoT device and edge computing targets ranging in power consumption from wearables and mobile devices (1 to 3 W) to small form-factor servers (5 to 50 W).  Functionality includes:
 
  - Support for deep learning models AlexNet, VGG-16, LeNet-5 and LeNet-300, and compressed models MobileNet and SqueezeNet
  
@@ -23,6 +23,7 @@ Functionality includes:
 &nbsp;&nbsp;&nbsp;&nbsp;[Model Compression Flow Diagram](#CompressionFlowDiagram)<br/>
 [Deep Learning Model Acceleration](#DeepLearningModelAcceleration)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Model Acceleration Flow Diagram](#AccelerationFlowDiagram)<br/>
+[Deep Learning Edge Computing](#DeepLearningEdgeComputing)<br/>
 [Deep Learning Embedded Targets](#SupportedEmbeddedTargets)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Nvidia Jetson TX2](#NvidiaJetsonTX2)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Intel Atom](#IntelAtom)<br/>
@@ -52,7 +53,7 @@ Below is a flow diagram showing the multi-iterative, multi-testpoint nature of m
 
 <!--- direct link to image storage on githubusercontent.com, image is discoverable -->
 
-![Deep learning model compression flow diagram](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Deep_Learning_Model_Compression_Flow_Diagram_RevA5.png "Deep learning model compression flow diagram")
+![Deep learning model compression flow diagram](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Deep_Learning_Model_Compression_Flow_Diagram_RevA6.png "Deep learning model compression flow diagram")
 
 &nbsp;<br/>
 
@@ -80,7 +81,7 @@ Below is a flow diagram showing deep learning model acceleration.  Like model co
 
 &nbsp;<br/>
 
-![Deep learning model acceleration flow diagram](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Deep_Learning_Model_Acceleration_Flow_Diagram_RevA3.png "Deep learning model acceleration flow diagram")
+![Deep learning model acceleration flow diagram](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Deep_Learning_Model_Acceleration_Flow_Diagram_RevA4.png "Deep learning model acceleration flow diagram")
 
 &nbsp;<br/>
 
@@ -95,6 +96,23 @@ Notes about the above flow diagram:
 4) Re-Testing results must be evaluated for accuracy and performance.  It may also be possible to make an approximate estimate of target power consumption, although reliable "real world" values can only be obtained by running real-time inference on the target.
 
 5) Testing blocks can potentially be parallelized, for example in cases where multiple compression models are concurrently being evaluated, or to simply make them faster.  In either case the data set can be divided into groups, and results aggregated upon completion.
+
+<a name="DeepLearningEdgeComputing"></a>
+# Deep Learning Edge Computing
+
+There is an increasing need to push deep learning training, compression, and testing into edge computing, closer to IoT product targets, in order to mitigate latency, internet connection reliability, privacy, and upstream bandwidth cloud weaknesses.  In a CICD solution, upstream bandwidth is of particular concern when IoT products continuously acquire new data for re-training and re-testing.  Some product examples include:
+
+* a local network of very low power smart cameras, local servers providing re-training and re-testing results, allowing any one camera to update knowledge shared among cameras
+
+* driverless vehicles where acquired new data must be stored temporarily in on-vehicle servers for processing to remove private information (people on private property, license plates, etc)
+
+* medical applications where bandwidth and privacy limitations prevent use of remote cloud / data centers, and on-premise servers must be small, quiet, and very low power
+
+Below is a flow diagram showing edge computing model compression re-training and re-testing.  Note that cloud data can be updated also, as latency and upstream bandwidth permits.  Any data considered private can remain in edge storage.
+
+&nbsp;<br/>
+
+![Edge computing deep learning model compression flow diagram](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Deep_Learning_Model_Compression_Edge_Computing_Flow_Diagram_RevA1.png "Edge computing deep learning model compression flow diagram")
 
 <a name="SupportedEmbeddedTargets"></a>
 # Deep Learning Embedded Targets
