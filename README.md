@@ -114,6 +114,8 @@ Below is a flow diagram showing edge computing model compression re-training and
 
 ![Edge computing deep learning model compression flow diagram](https://raw.githubusercontent.com/signalogic/SigDL/master/images/Deep_Learning_Model_Compression_Edge_Computing_Flow_Diagram_RevA1.png "Edge computing deep learning model compression flow diagram")
 
+&nbsp;<br/>
+
 <a name="SupportedEmbeddedTargets"></a>
 # Deep Learning Embedded Targets
 
