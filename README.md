@@ -9,7 +9,7 @@ The SigDL SDK provides binary libraries, example C/C++ and Python source code, a
 
 2. Deep learning model acceleration of training and testing in cloud and private servers
 
-The focus is on IoT device and edge computing targets ranging in power consumption from wearables and mobile devices (1 to 3 W) to small form-factor servers (5 to 50 W).  Functionality includes:
+SigDL is aimed at IoT device and edge computing targets ranging in power consumption from wearables and mobile devices (1 to 3 W) to small form-factor servers (5 to 75 W).  Functionality includes:
 
  - Support for deep learning models AlexNet, VGG-16, LeNet-5 and LeNet-300, and compressed models MobileNet and SqueezeNet
  
@@ -102,7 +102,7 @@ Notes about the above flow diagram:
 
 There is an increasing need to push deep learning training, compression, and testing into edge computing, closer to IoT product targets, in order to mitigate latency, internet connection reliability, privacy, and upstream bandwidth cloud weaknesses.  In a CICD solution, upstream bandwidth is of particular concern when IoT products continuously acquire new data for re-training and re-testing.  Some product examples include:
 
-* a local network of very low power smart cameras, local servers providing re-training and re-testing results, allowing any one camera to update knowledge shared among cameras
+* a local network of ultra low power smart cameras, with local servers providing re-training and re-testing to generate updated real-time inferences, allowing any one camera to update knowledge shared among cameras
 
 * driverless vehicles where acquired new data must be stored temporarily in on-vehicle servers for processing to remove private information (people on private property, license plates, etc)
 
