@@ -77,7 +77,7 @@ In the following description, "acceleration" means as-fast-as-possible training 
 <a name="AccelerationFlowDiagram"></a>
 ## Model Acceleration Flow Diagram
 
-Below is a flow diagram showing deep learning model acceleration.  Like model compression above, the process is multi-iterative with multiple test points.  In this case, the focus is on accelerating model training, for example reducing training time to a day or several hours, or possibly less.  When combined with model compression, the primary objectives are (i) map continuous integration and continuous deployment (CICD) onto available server resources (i.e. public cloud and/or private servers) and embedded targets (i.e. Edge and IoT products), and (ii) minimize CICD redeployment time, in order to increase reliability and robustness Edge and IoT products.
+Below is a flow diagram showing deep learning model acceleration.  Like model compression above, the process is multi-iterative with multiple test points.  In this case, the focus is on accelerating model training, for example reducing training time to a day or several hours, or possibly less.  When combined with model compression, the primary objectives are (i) map continuous integration and continuous deployment (CICD) onto available server resources (i.e. public cloud and/or private servers) and embedded targets (i.e. Edge and IoT products), and (ii) minimize CICD redeployment time, in order to increase reliability and robustness of Edge and IoT products.
 
 &nbsp;<br/>
 
@@ -195,7 +195,7 @@ Below is an image of a commercially available mini-ITX form-factor board<sup> 2<
 <a name="MovidiusMA2450"></a>
 ## Movidius MA2450 Neural Net Chip
 
-The Movidius neural net devices are small, very low power ASICs intended for use in Edge and IoT products.  The example shown here is a Myriad 2 MA2450 chip that highly optimizes a compressed deep learning model in order to minimize the chip's SWaP.
+The Movidius neural net devices are small, very low power ASICs intended for use in IoT device products.  The example shown here is a Myriad 2 MA2450 chip that highly optimizes a compressed deep learning model in order to minimize the chip's SWaP.
 
 Using ASICs, a compressed deep learning model can run under 1 W.  Of course there are tradeoffs in this approach; namely the system still needs another device (say an ARM) to run Linux, other general software, and likely some amount of OpenCV image processing, which consumes a substantial amount of additional power.  Another less obvious tradeoff is that typically only one compressed model (in the case of the Movidius device, MobileNet) is supported, and flexibility in model parameters, such as input image resolution and convolutional layer resolution, is limited.
 
