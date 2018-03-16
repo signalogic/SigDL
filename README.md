@@ -5,7 +5,7 @@
 ```
 The SigDL SDK provides binary libraries, example C/C++ and Python source code, and demos for:
 
-1. Deep learning model compression for real-time IoT and Edge embedded systems
+1. Deep learning model compression for IoT device and edge computing embedded systems
 
 2. Deep learning model acceleration of training and testing in cloud and private servers
 
@@ -36,14 +36,14 @@ SigDL is aimed at IoT device and edge computing targets ranging in power consump
 <a name="DeepLearningModelCompression"></a>
 # Deep Learning Model Compression
 
-Model compression is the process of compressing and optimizing a deep learning model trained and tested in the cloud into a model suitable for real-time inference on an IoT or Edge application embedded target.  When tested on the embedded target with the identical data set used in cloud training, the model must perform with acceptable accuracy, real-time performance (for example, frames per sec), and meet application-defined power consumption requirements.  Compression methods include basic approaches such as pruning, weight quantization and sharing, and weight encoding (for example Huffman coding), and more advanced approaches such as math algorithms that converts convolution layers to sparse matrices (under specific conditions) suitable for FFT processing; i.e. convolution in the frequency domain.  Optimization methods include intrinsics, pragmas, loop reduction, and other target device specific techniques that apply to the compressed model.  One example would be intrinsics that allow increased number of fixed-point operations per clock cycle, another would be a pragma that allows loop unrolling.
+Model compression is the process of compressing and optimizing a deep learning model trained and tested in the cloud into a model suitable for real-time inference on an IoT or edge application embedded target.  When tested on the embedded target with the identical data set used in cloud training, the model must perform with acceptable accuracy, real-time performance (for example, frames per sec), and meet application-defined power consumption requirements.  Compression methods include basic approaches such as pruning, weight quantization and sharing, and weight encoding (for example Huffman coding), and more advanced approaches such as math algorithms that converts convolution layers to sparse matrices (under specific conditions) suitable for FFT processing; i.e. convolution in the frequency domain.  Optimization methods include intrinsics, pragmas, loop reduction, and other target device specific techniques that apply to the compressed model.  One example would be intrinsics that allow increased number of fixed-point operations per clock cycle, another would be a pragma that allows loop unrolling.
 
 After compression and optimization methods are selected, the model <i>must be retrained and retested</i> using the compressed model in order to reach (i) a tolerable loss in accuracy (typically 2 - 5%) and (ii) required real-time performance (typically some number of frames per sec).  Re-training and re-testing apply all changes resulting from compression and optimization, such as fixed-point weight values, weight sharing, data re-use, alternative math, and other algorithm changes.  The overall process -- training, testing, compressing, retraining, and retesting -- may require many iterations until acceptable tradeoffs are reached.  This is a time-consuming, iterative process that must be done on high performance cloud or private servers and *not on the embedded target*, where it would take prohibitive amounts of time.
 
 <a name="CompressionFlowDiagram"></a>
 ## Model Compression Flow Diagram
 
-Below is a flow diagram showing the multi-iterative, multi-testpoint nature of model compression.  The objective is to map continuous integration and continuous deployment (CICD) onto available server resources (i.e. public cloud and/or private servers) and embedded targets (i.e. IoT and Edge products).
+Below is a flow diagram showing the multi-iterative, multi-testpoint nature of model compression.  The objective is to map continuous integration and continuous deployment (CICD) onto available server resources (i.e. public cloud and/or private servers) and embedded targets (i.e. IoT and edge products).
 
 &nbsp;<br/>
 
@@ -77,7 +77,7 @@ In the following description, "acceleration" means as-fast-as-possible training 
 <a name="AccelerationFlowDiagram"></a>
 ## Model Acceleration Flow Diagram
 
-Below is a flow diagram showing deep learning model acceleration.  Like model compression above, the process is multi-iterative with multiple test points.  In this case, the focus is on accelerating model training, for example reducing training time to a day or several hours, or possibly less.  When combined with model compression, the primary objectives are (i) map continuous integration and continuous deployment (CICD) onto available server resources (i.e. public cloud and/or private servers) and embedded targets (i.e. Edge and IoT products), and (ii) minimize CICD redeployment time, in order to increase reliability and robustness of Edge and IoT products.
+Below is a flow diagram showing deep learning model acceleration.  Like model compression above, the process is multi-iterative with multiple test points.  In this case, the focus is on accelerating model training, for example reducing training time to a day or several hours, or possibly less.  When combined with model compression, the primary objectives are (i) map continuous integration and continuous deployment (CICD) onto available server resources (i.e. public cloud and/or private servers) and embedded targets (i.e. edge and IoT products), and (ii) minimize CICD redeployment time, in order to increase reliability and robustness of edge and IoT products.
 
 &nbsp;<br/>
 
@@ -141,12 +141,12 @@ Below the "ocean FFT" and "random fog" CUDA demos are running.  For deep learnin
 <a name="IntelAtom"></a>
 ## Intel Atom
 
-The deep learning embedded targets below use Atom x5-E39xx family CPUs, but vary in SWaP<sup> 1</sup>, making them suitable for IoT and Edge products with power consumption ranging from 7 to 15 W.  Using an x86 compatible CPU offers advantages in (i) compatibility with a wide variety of software, (ii) fast development time, and (iii) support for a huge range of I/O and storage peripherals.
+The deep learning embedded targets below use Atom x5-E39xx family CPUs, but vary in SWaP<sup> 1</sup>, making them suitable for IoT and edge products with power consumption ranging from 7 to 15 W.  Using an x86 compatible CPU offers advantages in (i) compatibility with a wide variety of software, (ii) fast development time, and (iii) support for a huge range of I/O and storage peripherals.
 
 <a name="DeepLens_Atom"></a>
 ### Amazon DeepLens
 
-In terms of SWaP, Amazon AWS's DeepLens represents the current state-of-the-art lower boundary for x86 CPU based deep learning IoT and Edge products.  In a way, Amazon is competing for the "smallest possible x86 server"; the images below provide some insight into the challenges they faced.  The first image is a partial disassembly view.  Note the small form-factor motherboard, incorporating mobile phone PCB technology (such as ultra fine-pitch connectors and FBGA packages, blind and buried vias and microvias, and extensive use of 0201 and 1005 discrete component package sizes).  An Atom x5-E3930 dual-core CPU (1.3 GHz, 6.5 W TDP) is under the heat sink (there are no fans in the enclosure).
+In terms of SWaP, Amazon AWS's DeepLens represents the current state-of-the-art lower boundary for x86 CPU based deep learning IoT and edge products.  In a way, Amazon is competing for the "smallest possible x86 server"; the images below provide some insight into the challenges they faced.  The first image is a partial disassembly view.  Note the small form-factor motherboard, incorporating mobile phone PCB technology (such as ultra fine-pitch connectors and FBGA packages, blind and buried vias and microvias, and extensive use of 0201 and 1005 discrete component package sizes).  An Atom x5-E3930 dual-core CPU (1.3 GHz, 6.5 W TDP) is under the heat sink (there are no fans in the enclosure).
 
 Also note the use of a USB camera interface.  For applications requiring multiple cameras, or a multichannel combination of vision and audio I/O, adding more USB ports is straightforward when running Linux on an x86 CPU.
 
@@ -160,7 +160,7 @@ Below is a top (component) side view of the DeepLens motherboard:
 
 In any deep learning IoT product design, minimizing memory power consumption is crucial, but it's especially important for x86 CPU based designs, which require sizable external memory capacity in order to gain maximum advantage from running Linux and open source software (much of which is developed and runs in the cloud).  The DeepLens uses LPDDR4 DRAM, often referred to as "mobile DRAM" (i.e. cell phone memory technology).  The DeepLens has 8 GB of DRAM memory, implemented as four (4) Samsung 16 Gb x16 external devices (64-bit wide interface, maximum of 3733 Mbps transfer rate from a 233 MHz clock).  Non-volatile storage is provided by an SK Hynix 16 GB NAND Flash chip.
 
-Although the fanless DeepLens enclosure provides a great example of what's currently possible with x86 CPUs inside IoT and Edge products, Intel still has a ways to go to improve the situation.  The x5 CPU family generates enough heat that external LPDDR4 devices must be placed a considerable distance from the CPU (due to the mechanical size of the heat sink), which impacts both memory performance and overall size of the motherboard.  A desirable objective for future x86 CPU chip designs would be to use PoP (package on package) technology to allow memory devices to "stack" directly on top of the CPU.  However, this will take another major reduction in CPU power consumption.
+Although the fanless DeepLens enclosure provides a great example of what's currently possible with x86 CPUs inside IoT and edge products, Intel still has a ways to go to improve the situation.  The x5 CPU family generates enough heat that external LPDDR4 devices must be placed a considerable distance from the CPU (due to the mechanical size of the heat sink), which impacts both memory performance and overall size of the motherboard.  A desirable objective for future x86 CPU chip designs would be to use PoP (package on package) technology to allow memory devices to "stack" directly on top of the CPU.  However, this will take another major reduction in CPU power consumption.
 
 &nbsp;<br/>
 
@@ -254,15 +254,15 @@ The images below show multiple 64-core PCIe cards (up to 384 or more c66x cores 
 
 For detailed information on the underlying technology of combined c66x + x86 architecture solutions, see the TI wiki pages for [HPC](http://processors.wiki.ti.com/index.php/HPC), [c66x OpenCV](http://processors.wiki.ti.com/index.php/C66x_opencv), and [NFV Transcoding](http://processors.wiki.ti.com/index.php/NFV_Transcoding).
 
-In addition to the above "pure cloud" solutions, the combined c66x + x86 architecture can also target small-form factor servers in the 30 to 70 W range.  The images below show a combination of Atom x86 and TI c66x cores in a mini-ITX format, with 32 to 64 c66x cores accessible as half-size PCIe card(s).
+In addition to the above "pure cloud" solutions, the combined c66x + x86 architecture can also target small-form factor edge computing servers in the 30 to 70 W range.  The images below show a combination of Atom x86 and TI c66x cores in a mini-ITX format, with 32 to 64 c66x cores accessible as half-size PCIe card(s).
 
 ![TI c66x + x86 deep learning small server solution, using mini-ITX (iso view)](https://raw.githubusercontent.com/signalogic/SigDL/master/images/deep_learning_c66x_x86_server_32cores_iso_view.png "TI c66x + x86 deep learning small server solution, using mini-ITX (iso view)")
 
-In the mini-ITX images, the motherboard is a dual core Atom (C2358 @ 1.74 GHz) with 4x GbE interfaces, and 8 GB DDR3 mem @ 1333 MHz.  A more suitable motherboard would be a x5-E3940 quad core Atom, with either a x4 or x8 PCIe slot (or mPCIe interface).
+In the mini-ITX images, the motherboard is a dual core Atom (C2358 @ 1.74 GHz) with 4x GbE interfaces, and 8 GB DDR3 mem @ 1333 MHz.  A more suitable motherboard would contain x5-E39xx dual-core or quad-core Atom, with either a x4 or x8 PCIe slot (or mPCIe interface).
 
 ![TI c66x + x86 deep learning small server solution, using mini-ITX (top view)](https://raw.githubusercontent.com/signalogic/SigDL/master/images/deep_learning_c66x_x86_server_32cores_top_view.png "TI c66x + x86 deep learning small server solution, using mini-ITX (top view)")
 
-As an interesting side note, besides x86 it's also possible to combine a half-size c66x PCIe card Tegra GPU SoCs, for example the Jetson TX2 board has an x4 PCIe slot (see Jetson pics above).  What could be done with a next-gen Tegra (say 128 CUDA cores and 128 Tensor cores) and 32 c66x cores ?
+As an interesting side note, besides x86 it's also possible to combine a half-size c66x PCIe card Tegra GPU SoCs, for example the Jetson TX2 board has an x4 PCIe slot (see Jetson pics above).  What are the possibilities in edge computing applicaitions of a mini-ITX server containing next-gen Tegra (say 128 CUDA cores and 128 Tensor cores) and 32 c66x cores ?  
 
 If you are using or considering to use TI c66x and wish to discuss this either with Signalogic or 3-way with TI Sr. Management, please contact Signalogic.
 
