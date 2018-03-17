@@ -119,7 +119,7 @@ Below is a flow diagram showing edge computing model compression re-training and
 <a name="SupportedEmbeddedTargets"></a>
 # Deep Learning Embedded Targets
 
-Work is ongoing to support the following embedded targets with SigDL software.  The following sections take a closer look at available deep learning product platforms and form-factors that range in power consumption from 1 to 30 W.
+Work is ongoing to support the following embedded targets with SigDL software.  The following sections take a closer look at available deep learning product platforms and form-factors that range in power consumption from 1 to 75 W.
 
 <a name="NvidiaJetsonTX2"></a>
 ## Nvidia Jetson TX2
